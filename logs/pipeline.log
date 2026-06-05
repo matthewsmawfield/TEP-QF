@@ -1,0 +1,35 @@
+2026-06-03 20:43:29,853 [INFO] ============================================================
+2026-06-03 20:43:29,853 [INFO] TEP-QF Analysis Pipeline (Paper 23, Qatar)
+2026-06-03 20:43:29,853 [INFO] ============================================================
+2026-06-03 20:43:29,853 [INFO] Symbolic derivation pipeline for TEP-QF
+2026-06-03 20:43:29,853 [INFO] Project root: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-QF
+2026-06-03 20:43:29,853 [INFO] Log file: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-QF/logs/pipeline.log
+2026-06-03 20:43:29,853 [INFO] Running steps: [1, 2, 3, 4]
+2026-06-03 20:43:29,853 [INFO] ============================================================
+2026-06-03 20:43:29,853 [INFO] Step 1: HJ -> Klein-Gordon symbolic proof
+2026-06-03 20:43:29,853 [INFO] Module: derivations.derive_klein_gordon
+2026-06-03 20:43:29,853 [INFO] ============================================================
+2026-06-03 20:43:30,441 [WARNING] Module derivations.derive_klein_gordon has no main() function
+2026-06-03 20:43:30,441 [INFO] Step 1 completed successfully.
+2026-06-03 20:43:30,441 [INFO] ============================================================
+2026-06-03 20:43:30,441 [INFO] Step 2: Dirac operator tetrad collapse
+2026-06-03 20:43:30,441 [INFO] Module: derivations.derive_dirac_subsumption
+2026-06-03 20:43:30,441 [INFO] ============================================================
+2026-06-03 20:43:30,446 [WARNING] Module derivations.derive_dirac_subsumption has no main() function
+2026-06-03 20:43:30,446 [INFO] Step 2 completed successfully.
+2026-06-03 20:43:30,446 [INFO] ============================================================
+2026-06-03 20:43:30,446 [INFO] Step 3: Spin as temporal holonomy
+2026-06-03 20:43:30,446 [INFO] Module: derivations.derive_spin_holonomy
+2026-06-03 20:43:30,446 [INFO] ============================================================
+2026-06-03 20:43:30,496 [WARNING] Module derivations.derive_spin_holonomy has no main() function
+2026-06-03 20:43:30,496 [INFO] Step 3 completed successfully.
+2026-06-03 20:43:30,496 [INFO] ============================================================
+2026-06-03 20:43:30,496 [INFO] Step 4: Master SymPy audit & verification
+2026-06-03 20:43:30,496 [INFO] Module: derivations.sympy_audit
+2026-06-03 20:43:30,496 [INFO] ============================================================
+2026-06-03 20:43:30,532 [WARNING] Module derivations.sympy_audit has no main() function
+2026-06-03 20:43:30,532 [INFO] Step 4 completed successfully.
+2026-06-03 20:43:30,533 [INFO] ============================================================
+2026-06-03 20:43:30,533 [INFO] Pipeline complete. All steps succeeded.
+2026-06-03 20:43:30,533 [INFO] Master results: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-QF/results/pipeline_results.json
+2026-06-03 20:43:30,533 [INFO] ============================================================

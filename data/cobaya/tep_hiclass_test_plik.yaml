@@ -1,0 +1,69 @@
+# Test native TEP background-only with Plik high-l TT
+
+theory:
+  classy:
+    path: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC/external/hi_class/hi_class
+    ignore_obsolete: true
+    extra_args:
+      output: tCl,pCl,lCl
+      lensing: yes
+      modes: s,t
+      non_linear: none
+      expansion_model: lcdm
+      tep_mode: 'yes'
+      epsilon_T: 0.0066
+      z_T: 5.0
+      n_T: 2.0
+
+likelihood:
+  planck_2018_highl_plik.TT: null
+
+params:
+  logA:
+    prior: {min: 2.5, max: 3.5}
+    ref: {dist: norm, loc: 3.044, scale: 0.014}
+    proposal: 0.01
+    drop: true
+  A_s:
+    value: 'lambda logA: 1e-10*np.exp(logA)'
+  n_s:
+    prior: {min: 0.94, max: 1.0}
+    ref: {dist: norm, loc: 0.966, scale: 0.004}
+    proposal: 0.004
+  H0:
+    prior: {min: 40, max: 100}
+    ref: {dist: norm, loc: 67.4, scale: 0.5}
+    proposal: 1.5
+  omega_b:
+    prior: {min: 0.005, max: 0.1}
+    ref: {dist: norm, loc: 0.0224, scale: 0.0002}
+    proposal: 0.0003
+  omega_cdm:
+    prior: {min: 0.001, max: 0.99}
+    ref: {dist: norm, loc: 0.12, scale: 0.001}
+    proposal: 0.0015
+  tau_reio:
+    prior: {min: 0.01, max: 0.8}
+    ref: {dist: norm, loc: 0.054, scale: 0.007}
+    proposal: 0.01
+  epsilon_T:
+    prior: {min: 0.0, max: 0.02}
+    ref: {dist: norm, loc: 0.0066, scale: 0.002}
+    proposal: 0.001
+    latex: \epsilon_T
+  A_planck:
+    prior: {min: 0.9, max: 1.1}
+    ref: {dist: norm, loc: 1.0, scale: 0.0025}
+    proposal: 0.005
+
+sampler:
+  mcmc:
+    max_samples: 10
+    Rminus1_stop: 0.05
+    output_every: 1
+    learn_proposal: false
+    drag: false
+    seed: 200
+
+output: results/mcmc_chains/tep_hiclass_test_plik
+resume: false

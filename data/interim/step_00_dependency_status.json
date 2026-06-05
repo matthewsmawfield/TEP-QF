@@ -1,0 +1,63 @@
+{
+  "step": "00_setup",
+  "timestamp": "2026-05-25T05:44:20.582668",
+  "python_packages": {
+    "numpy": {
+      "available": true,
+      "version": "1.26.4"
+    },
+    "scipy": {
+      "available": true,
+      "version": "1.16.2"
+    },
+    "pandas": {
+      "available": true,
+      "version": "2.2.3"
+    },
+    "matplotlib": {
+      "available": true,
+      "version": "3.10.7"
+    },
+    "cobaya": {
+      "available": true,
+      "version": "3.6.2"
+    },
+    "getdist": {
+      "available": true,
+      "version": "1.7.6"
+    },
+    "pyyaml": {
+      "available": true,
+      "version": "6.0.3"
+    }
+  },
+  "system_dependencies": {
+    "gcc": {
+      "available": true,
+      "description": "GCC compiler"
+    },
+    "make": {
+      "available": true,
+      "description": "Make build system"
+    },
+    "git": {
+      "available": true,
+      "description": "Git version control"
+    }
+  },
+  "directories_created": [
+    "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC/data/interim",
+    "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC/data/processed",
+    "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC/data/hi_class",
+    "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC/data/cobaya",
+    "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC/results/mcmc_chains",
+    "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC/results/figures",
+    "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC/logs"
+  ],
+  "status": "SUCCESS",
+  "mpi_available": true,
+  "hi_class": {
+    "available": true,
+    "path": "/Users/matthewsmawfield/opt/miniconda3/lib/python3.13"
+  }
+}

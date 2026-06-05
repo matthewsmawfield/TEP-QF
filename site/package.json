@@ -1,0 +1,29 @@
+{
+  "name": "tep-qf-site",
+  "version": "0.1.0",
+  "description": "Temporal Equivalence Principle: The Dirac Limit of Dynamical Proper Time",
+  "main": "index.html",
+  "scripts": {
+    "dev": "node dev-server.js",
+    "start": "python3 -m http.server 8000",
+    "build": "node build.js",
+    "build:markdown": "npm run build && node html-to-markdown.js",
+    "markdown": "node html-to-markdown.js"
+  },
+  "keywords": [
+    "TEP-QF",
+    "quantum foundations",
+    "Dirac equation",
+    "proper time",
+    "phase transport",
+    "Temporal Equivalence Principle"
+  ],
+  "author": "Matthew Lukin Smawfield",
+  "license": "CC-BY-4.0",
+  "devDependencies": {
+    "chokidar": "^4.0.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

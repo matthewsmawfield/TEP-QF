@@ -1,0 +1,7 @@
+v0.1 (Qatar) - Initial release of TEP-QF manuscript
+
+- Proper-time phase transport formalism
+- Derivation of Klein-Gordon and Dirac operators from dynamical proper-time geometry
+- Spin and antimatter as temporal-orientation holonomy
+- Reinterpretation of the Dirac spinor as a historical artifact of flat-frame algebraic encoding
+- Recovery of the KG–Dirac sector of relativistic quantum theory as the screened tangent limit

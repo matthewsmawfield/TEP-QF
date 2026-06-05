@@ -1,0 +1,75 @@
+<div class="section appendix">
+<h2>Appendix A: Detailed Derivations</h2>
+
+<h3>A.1 Tetrad Formalism in Curved Spacetime</h3>
+<p>
+In curved spacetime, the Dirac spinor cannot be defined directly on the manifold. A local orthonormal frame (tetrad) <em>e<sup>a</sup><sub>&mu;</sub></em> is required at each point, satisfying:
+</p>
+<p class="equation">
+g<sub>&mu;&nu;</sub> = e<sup>a</sup><sub>&mu;</sub> e<sup>b</sup><sub>&nu;</sub> &eta;<sub>ab</sub>
+</p>
+<p>
+where <em>&eta;<sub>ab</sub></em> is the Minkowski metric. The inverse tetrad <em>e<sub>a</sub><sup>&mu;</sup></em> satisfies <em>e<sup>a</sup><sub>&mu;</sub> e<sub>a</sub><sup>&nu;</sup> = &delta;<sup>&nu;</sup><sub>&mu;</sub></em>. The Dirac matrices in curved spacetime are defined as:
+</p>
+<p class="equation">
+&gamma;<sup>&mu;</sup> = e<sub>a</sub><sup>&mu;</sup> &gamma;<sup>a</sup>
+</p>
+<p>
+where <em>&gamma;<sup>a</sup></em> are the constant flat-space Dirac matrices satisfying the Clifford algebra <em>{&gamma;<sup>a</sup>, &gamma;<sup>b</sup>} = 2&eta;<sup>ab</sup></em>.
+</p>
+
+<h3>A.2 Spin Connection</h3>
+<p>
+The spin-covariant derivative incorporates the spin connection <em>&omega;<sup>ab</sup><sub>&mu;</sub></em>:
+</p>
+<p class="equation">
+&nabla;<sub>&mu;</sub> = &part;<sub>&mu;</sub> + (1/4) &omega;<sup>ab</sup><sub>&mu;</sub> &sigma;<sub>ab</sub>
+</p>
+<p>
+where <em>&sigma;<sub>ab</sub> = (1/2)[&gamma;<sub>a</sub>, &gamma;<sub>b</sub>]</em> are the Lorentz generators. The spin connection is related to the tetrad by:
+</p>
+<p class="equation">
+&omega;<sup>ab</sup><sub>&mu;</sub> = e<sup>a</sup><sub>&nu;</sub> &nabla;<sub>&mu;</sub> e<sub>b</sub><sup>&nu;</sup>
+</p>
+<p>
+In the flat-frame limit where the tetrad becomes the identity (<em>e<sup>a</sup><sub>&mu;</sub> &rarr; &delta;<sup>a</sup><sub>&mu;</sub></em>), the spin connection vanishes and the covariant derivative reduces to the ordinary partial derivative.
+</p>
+
+<h3>A.3 Conformal Transformation of the Dirac Operator</h3>
+<p>
+Under the conformal transformation <em>g&#771;<sub>&mu;&nu;</sub> = A<sup>2</sup>(&phi;) g<sub>&mu;&nu;</sub></em>, the tetrad rescales as <em>e<sup>a</sup><sub>&mu;</sub> &rarr; A(&phi;) e<sup>a</sup><sub>&mu;</sub></em>. The Dirac operator therefore acquires both a direct tetrad rescaling and additional terms from the modified spin connection. The explicit transformation is non-trivial because the spin connection depends on derivatives of <em>A(&phi;)</em>; see e.g. Penrose &amp; Rindler [14]. When <em>A(&phi;) = 1</em> (screened limit, where the observable shear sector <em>&Sigma;<sub>&mu;</sub><sup>obs</sup> &rarr; 0</em> with <em>A(&phi;)</em> normalized to its ambient environmental value), the conformal transformation is trivial and the standard Dirac operator is recovered.
+</p>
+<p>
+The full tetrad algebra factorisation — from the geometric Dirac operator <em>(i e<sup>&mu;</sup><sub>a</sub> &gamma;<sup>a</sup> &nabla;<sub>&mu;</sub> &minus; m) &psi; = 0</em> to the standard flat-space form <em>(i&gamma;<sup>&mu;</sup>&part;<sub>&mu;</sub> &minus; m)&psi; = 0</em> under the flattening conditions <em>&Sigma;<sub>&mu;</sub> = 0</em>, <em>B(&phi;)(&nabla;&phi;)<sup>2</sup> &rarr; 0</em> — has been verified symbolically using SymPy. The audit log documenting each algebraic step (Clifford algebra verification, tetrad identity, spin connection vanishing, operator collapse, and disformal signpost) is available in <code>results/sympy_audit.log</code>. The corresponding derivation scripts are in <code>scripts/derivations/</code>.
+</p>
+
+<h3>A.4 Disformal Departure from Conformal Collapse</h3>
+<p>
+On the full Jakarta ansatz <em>g&#771;<sub>&mu;&nu;</sub> = A<sup>2</sup>(&phi;) g<sub>&mu;&nu;</sub> + B(&phi;) &nabla;<sub>&mu;</sub>&phi; &nabla;<sub>&nu;</sub>&phi;</em>, the conformal sector alone is tetrad-rescalable. The disformal term is rank-one and generates off-diagonal matter-frame components <em>g&#771;<sub>&mu;&nu;</sub> = B(&phi;) &nabla;<sub>&mu;</sub>&phi; &nabla;<sub>&nu;</sub>&phi;</em> whenever <em>&nabla;<sub>&mu;</sub>&phi; &nabla;<sub>&nu;</sub>&phi;</em> has support in both temporal and spatial directions. Identity tetrad collapse therefore requires suppression of the observable disformal response, not merely vanishing temporal shear. SymPy Audit A.4 verifies this obstruction at the metric level; the complete disformal kinematics audit (inverse metric, <em>n</em><sub>eff</sub>, Christoffel symbols, holonomy sector) is implemented in TEP-KIN (Paper 25), which carries the full <em>g&#771;<sub>&mu;&nu;</sub></em> through interaction routing and measurement while this paper establishes the screened tangent limit recovered when <em>B(&phi;)(&nabla;&phi;)<sup>2</sup> &rarr; 0</em>.
+</p>
+
+<h3>A.5 Holonomy of the Orientation Bundle</h3>
+<p>
+The temporal field carries an orientation bundle with structure group <em>O(1,3)</em>. Away from topological defects, the temporal shear <em>&Sigma;<sub>&mu;</sub> = &nabla;<sub>&mu;</sub> ln A(&phi;)</em> is a smooth gradient, and by Stokes' theorem:
+</p>
+<p class="equation">
+&oint;<sub>C</sub> &Sigma;<sub>&mu;</sub> dx<sup>&mu;</sup> = &oint;<sub>C</sub> d(ln A) = 0
+</p>
+<p>
+for any contractible loop in a simply connected region where <em>A(&phi;)</em> is smooth and single-valued, as established in the original TEP theory, which assumes the exponential form <em>A(&phi;) = exp(&beta;<sub>A</sub> &phi; / M<sub>Pl</sub>)</em> everywhere. The conformal sector therefore carries no holonomy; the metric <em>g&#771;<sub>&mu;&nu;</sub> = A<sup>2</sup>(&phi;) g<sub>&mu;&nu;</sub></em> is single-valued everywhere.
+</p>
+<p>
+The holonomy resides in the postulated orientation sector. In the defect regime the orientation bundle carries a connection one-form <em>&vartheta;<sub>&mu;</sub></em> with curvature concentrated at the core; around any loop encircling the core,
+</p>
+<p class="equation">
+&oint;<sub>C</sub> &vartheta;<sub>&mu;</sub> dx<sup>&mu;</sup> = n &middot; 4&pi;,  n &isin; &#8484;
+</p>
+<p>
+The matter-clock phase couples to this sector with half-integer weight, <em>dS &sup; (&hbar;/2) &vartheta;<sub>&mu;</sub> dx<sup>&mu;</sup></em>, so the minimal winding <em>n = &pm;1</em> yields <em>&Delta;S/&hbar; = &pm;2&pi;</em> &mdash; preserving single-valuedness of <em>&Psi; = exp(iS/&hbar;)</em> &mdash; while a <em>2&pi;</em> spatial rotation of the defect yields <em>&Delta;S/&hbar; = &pm;&pi;</em>, the sign flip characteristic of spinors. The half-integer weight is postulated here as the minimal consistent charge; its derivation, and the non-abelian <em>SU(2)</em> structure of the full spinor representation, require the multi-defect treatment of TEP-SPIN (Paper 24). The single scalar <em>&phi;</em> generates neither the winding nor the non-abelian structure; both belong to the postulated orientation sector.
+</p>
+
+<h3>A.6 SymPy Audit Environment</h3>
+<p>
+The symbolic derivations were executed in a reproducible Python environment with the following pinned dependencies: Python 3.11, SymPy 1.12, NumPy 1.26, and SciPy 1.11. The primary derivation scripts &mdash; <code>derive_klein_gordon.py</code>, <code>derive_dirac_limit.py</code>, <code>derive_spin_holonomy.py</code>, and <code>sympy_audit.py</code> &mdash; are located in <code>scripts/derivations/</code>. The master audit verifies: (i) Clifford algebra closure for the rescaled Dirac matrices; (ii) tetrad identity <em>g<sub>&mu;&nu;</sub> = e<sup>a</sup><sub>&mu;</sub> e<sup>b</sup><sub>&nu;</sub> &eta;<sub>ab</sub></em> under conformal rescaling; (iii) spin-connection vanishing in the flat-frame limit <em>&Sigma;<sub>&mu;</sub> = 0</em>; (iv) operator collapse from the curved-space Dirac operator to the standard flat-space form; and (v) the disformal signpost audit (rank-one obstruction to conformal collapse). To reproduce the audit independently, run <code>python scripts/run_all.py --audit</code> from the repository root; the master audit writes the step-by-step log to <code>results/sympy_audit.log</code>. The full disformal tensor audit is in TEP-KIN (Paper 25).
+</p>
+</div>

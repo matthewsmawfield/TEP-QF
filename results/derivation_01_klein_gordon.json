@@ -1,0 +1,25 @@
+{
+  "derivation": "01_klein_gordon",
+  "title": "Klein-Gordon as the Linear Phase-Field Equation",
+  "metric_signature": "(+,-,-,-)",
+  "method": "WKB / eikonal expansion from causal wave equation with conformal d'Alembertian",
+  "causal_dalembertian": "Box_tilde = A^{-2} Box_M + 2 A^{-3} eta^{mu nu} (d_mu A)(d_nu)",
+  "key_result": "KG operator recovered as linear equation whose eikonal limit is g-tilde-HJ",
+  "symbolic_verification": {
+    "causal_dalembertian_constructed": true,
+    "wkb_ansatz_inserted": true,
+    "hbar_orders_separated": true
+  },
+  "orders_in_hbar": {
+    "O_hbar_minus_2": "g-tilde-Hamilton-Jacobi equation: (d_t S)^2 - |grad S|^2 = A^2 m^2 c^2",
+    "O_hbar_minus_1": "Transport equation with temporal-shear correction",
+    "O_hbar_0": "Quantum potential + shear-amplitude coupling: A^{-2} Box_M R + 2 A^{-3} eta(dA, dR)"
+  },
+  "screened_limit": "A->1, d_mu A->0 reduces to standard Klein-Gordon",
+  "contrast_with_standard": "Standard QM postulates operator substitution E->i hbar d_t; TEP recovers KG as the linear wave equation in the causal metric, whose eikonal limit is the geometric HJ equation.",
+  "mass_convention": "Bare parameter m in action S = -m c^2 integral d_tau_tilde; local frequency omega_local = m c^2 A(phi) / hbar; effective inertial mass m_eff -> m in screened limit.",
+  "output_files": {
+    "latex": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-QF/results/derivation_01_klein_gordon.tex",
+    "json": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-QF/results/derivation_01_klein_gordon.json"
+  }
+}

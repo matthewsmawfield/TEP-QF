@@ -1,0 +1,8 @@
+{
+  "name": "tep-qf",
+  "version": "0.1.0",
+  "description": "Temporal Equivalence Principle: The Dirac Limit of Dynamical Proper Time",
+  "scripts": {
+    "build:markdown": "npm run build:markdown --prefix site"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "audit": "sympy_tep_qf",
+  "timestamp": "2026-06-12T14:26:58.319442+00:00",
+  "status": "PASSED",
+  "derivations_verified": {
+    "01_phase_action": "PASS - dimensionally consistent",
+    "02_klein_gordon": "PASS - causal d'Alembertian Box_tilde constructed; WKB O(hbar^-2), O(hbar^-1), O(hbar^0) orders symbolically verified",
+    "03_dirac_subsumption": "PASS - tangent-space degradation verified",
+    "03b_disformal_signpost": "PASS - disformal metric departs from conformal/Minkowski unless B(phi)(nabla phi)^2 -> 0",
+    "04_spin_holonomy": "PASS - SU(2) commutation verified numerically",
+    "05_cpt_orientability": "PASS - geometric identity confirmed"
+  },
+  "conclusion": "Standard Dirac operator emerges as the local limit of the geometric operator in the isochronous background",
+  "output_files": {
+    "log": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-QF/results/sympy_audit.log",
+    "json": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-QF/results/sympy_audit.json"
+  }
+}

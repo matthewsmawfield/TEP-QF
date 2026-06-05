@@ -1,0 +1,82 @@
+# DEPRECATED: propto_omega braiding scan for free c_B
+# WARNING: This uses the unvalidated Horndeski proxy, not native TEP.
+# Native TEP uses tep_mode with epsilon_T, z_T, n_T.
+# This config is retained only for historical comparison.
+
+theory:
+  classy:
+    path: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC/external/hi_class/hi_class
+    ignore_obsolete: true
+    extra_args:
+      output: tCl,pCl,lCl
+      lensing: yes
+      modes: s,t
+      non_linear: none
+      gravity_model: propto_omega
+      expansion_model: lcdm
+      expansion_smg: 0.5
+      Omega_smg: 0.686083
+      skip_stability_tests_smg: 'yes'
+
+likelihood:
+  planck_2018_lowl.TT: null
+  planck_2018_lowl.EE: null
+  planck_2018_lensing.native: null
+  bao.sdss_dr12_consensus_final: null
+  sn.pantheonplus: null
+
+params:
+  logA:
+    prior: {min: 2.5, max: 3.5}
+    ref: {dist: norm, loc: 3.044, scale: 0.014}
+    proposal: 0.01
+    drop: true
+  A_s:
+    value: 'lambda logA: 1e-10*np.exp(logA)'
+  n_s:
+    prior: {min: 0.94, max: 1.0}
+    ref: {dist: norm, loc: 0.966, scale: 0.004}
+    proposal: 0.004
+  H0:
+    prior: {min: 40, max: 100}
+    ref: {dist: norm, loc: 67.4, scale: 0.5}
+    proposal: 1.5
+  omega_b:
+    prior: {min: 0.005, max: 0.1}
+    ref: {dist: norm, loc: 0.0224, scale: 0.0002}
+    proposal: 0.0003
+  omega_cdm:
+    prior: {min: 0.001, max: 0.99}
+    ref: {dist: norm, loc: 0.12, scale: 0.001}
+    proposal: 0.0015
+  tau_reio:
+    prior: {min: 0.01, max: 0.8}
+    ref: {dist: norm, loc: 0.054, scale: 0.007}
+    proposal: 0.01
+  A_planck:
+    prior: {min: 0.9, max: 1.1}
+    ref: {dist: norm, loc: 1.0, scale: 0.0025}
+    proposal: 0.005
+  c_B:
+    prior: {min: -0.05, max: 0.05}
+    ref: {dist: norm, loc: -0.019624, scale: 0.005}
+    proposal: 0.002
+    drop: true
+  parameters_smg:
+    value: 'lambda c_B: f"0.003332, {c_B}, 0.019624, 0.000000, 1.0"'
+    derived: False
+
+sampler:
+  mcmc:
+    max_samples: 500
+    Rminus1_stop: 0.05
+    Rminus1_cl_stop: 0.2
+    output_every: 10
+    learn_proposal: true
+    learn_proposal_Rminus1_max_early: 100.0
+    fallback_covmat_scale: 3
+    drag: false
+    seed: 100
+
+output: results/mcmc_chains/tep_hiclass_scan_cB
+resume: false

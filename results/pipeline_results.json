@@ -1,0 +1,32 @@
+{
+  "pipeline": "TEP-QF",
+  "paper": "Paper 23 (Qatar)",
+  "timestamp": "2026-06-03T17:43:30.532584+00:00",
+  "status": "COMPLETE",
+  "steps_run": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "step_results": {
+    "1": {
+      "success": true,
+      "error": null
+    },
+    "2": {
+      "success": true,
+      "error": null
+    },
+    "3": {
+      "success": true,
+      "error": null
+    },
+    "4": {
+      "success": true,
+      "error": null
+    }
+  },
+  "log_file": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-QF/logs/pipeline.log",
+  "output_directory": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-QF/results"
+}

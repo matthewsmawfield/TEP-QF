@@ -1,0 +1,27 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "TEP-QF",
+  "description": "The KG–Dirac sector of relativistic quantum mechanics is recovered as the screened flat-frame tangent limit of dynamical proper-time phase transport within the Temporal Equivalence Principle framework.",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Matthew Lukin",
+      "familyName": "Smawfield",
+      "@id": "https://orcid.org/0009-0003-8219-3159"
+    }
+  ],
+  "version": "v0.1 (Qatar)",
+  "datePublished": "2026-06-12",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "codeRepository": "https://github.com/matthewsmawfield/TEP-QF",
+  "url": "https://mlsmawfield.com/tep/qf/",
+  "keywords": [
+    "quantum foundations",
+    "Dirac equation",
+    "proper time",
+    "phase transport",
+    "temporal equivalence principle",
+    "geometric quantum mechanics"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "derivation": "02_dirac_subsumption",
+  "title": "Dirac Operator as Local Tetrad Representation",
+  "metric_signature": "(+,-,-,-)",
+  "method": "Geometric collapse under artificial flattening (screened limit)",
+  "key_result": "Standard Dirac operator is recovered as the local Clifford/tetrad representation in the isochronous limit where Sigma_mu -> 0 and B(phi) -> 0",
+  "conclusion": "Standard Dirac equation emerges as the screened limiting case of the geometric operator when temporal shear and disformal coupling vanish",
+  "epistemic_status": "Algebraic flat-space recovery (exact tensor algebra), not a derivation of the Dirac equation from first principles",
+  "output_files": {
+    "latex": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-QF/results/derivation_02_dirac_subsumption.tex",
+    "json": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-QF/results/derivation_02_dirac_subsumption.json"
+  }
+}

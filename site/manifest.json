@@ -1,0 +1,85 @@
+{
+  "name": "TEP-QF",
+  "short_name": "TEP-QF",
+  "paper_number": "23",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1C2E4A",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "public/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "public/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "title": "Temporal Equivalence Principle: The Dirac Limit of Dynamical Proper Time",
+  "short_title": "TEP-QF: Quantum Foundations",
+  "author": "Matthew Lukin Smawfield",
+  "version": "v0.1",
+  "codename": "Qatar",
+  "date": "2026-06-12",
+  "first_published": "12 June 2026",
+  "doi": "10.5281/zenodo.20572698",
+  "sections": [
+    {
+      "id": "section-abstract",
+      "title": "Abstract",
+      "file": "1_abstract.html",
+      "order": 1
+    },
+    {
+      "id": "section-intro",
+      "title": "1. Introduction: The Background-Dependency of Relativistic Quantum Theory",
+      "file": "2_introduction.html",
+      "order": 2
+    },
+    {
+      "id": "section-theory",
+      "title": "2. Proper-Time Phase Transport",
+      "file": "3_theory.html",
+      "order": 3
+    },
+    {
+      "id": "section-dirac",
+      "title": "3. The Dirac Operator as a Screened Limit",
+      "file": "4_dirac_operator.html",
+      "order": 4
+    },
+    {
+      "id": "section-spin",
+      "title": "4. Spin and Antimatter as Geometric Orientations",
+      "file": "5_spin_antimatter.html",
+      "order": 5
+    },
+    {
+      "id": "section-conclusion",
+      "title": "5. Conclusion",
+      "file": "6_conclusion.html",
+      "order": 6
+    },
+    {
+      "id": "section-references",
+      "title": "References",
+      "file": "7_references.html",
+      "order": 7
+    },
+    {
+      "id": "section-appendix",
+      "title": "Appendix A",
+      "file": "8_appendix.html",
+      "order": 8
+    },
+    {
+      "id": "section-reproducibility",
+      "title": "Data Availability and Reproducibility",
+      "file": "9_reproducibility.html",
+      "order": 9
+    }
+  ]
+}

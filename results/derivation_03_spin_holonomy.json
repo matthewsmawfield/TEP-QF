@@ -1,0 +1,18 @@
+{
+  "derivation": "03_spin_holonomy",
+  "title": "Spin-1/2 as Temporal-Orientation Holonomy",
+  "method": "Geometric holonomy of orientation bundle",
+  "key_result": "Spin up/down = +/- winding of orientation phase relative to local shear",
+  "epistemic_status": "Proposed geometric structure beyond the scalar sector; abelian support in this paper, non-abelian completion in TEP-SPIN (Paper 24)",
+  "numerical_demo": {
+    "loop_radius": 1.0,
+    "winding_number": 1,
+    "azimuthal_orientation_connection": 2.0,
+    "total_phase_rad": 12.566370614359172,
+    "phase_over_4pi": 1.0
+  },
+  "output_files": {
+    "latex": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-QF/results/derivation_03_spin_holonomy.tex",
+    "json": "/Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-QF/results/derivation_03_spin_holonomy.json"
+  }
+}

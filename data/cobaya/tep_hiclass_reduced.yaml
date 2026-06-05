@@ -1,0 +1,422 @@
+theory:
+  classy:
+    path: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC/external/hi_class/hi_class
+    ignore_obsolete: true
+    extra_args:
+      output: tCl
+      l_max_scalars: 100
+      expansion_model: lcdm
+      tep_mode: 'yes'
+      epsilon_T: 0.0066
+      z_T: 5.0
+      n_T: 2.0
+likelihood:
+  planck_2018_lowl.TT: null
+  planck_2018_lowl.EE: null
+  bao.sdss_dr12_consensus_final: null
+  sn.pantheonplus: null
+params:
+  A_s:
+    prior:
+      min: 1.0e-10
+      max: 5.0e-09
+    ref:
+      dist: norm
+      loc: 2.1e-09
+      scale: 5.0e-11
+    proposal: 5.0e-11
+  n_s:
+    prior:
+      min: 0.8
+      max: 1.2
+    ref:
+      dist: norm
+      loc: 0.966
+      scale: 0.004
+    proposal: 0.002
+    renames:
+    - ns
+  H0:
+    prior:
+      min: 40
+      max: 100
+    ref:
+      dist: norm
+      loc: 67.4
+      scale: 0.5
+    proposal: 0.5
+  omega_b:
+    prior:
+      min: 0.005
+      max: 0.1
+    ref:
+      dist: norm
+      loc: 0.0224
+      scale: 0.0002
+    proposal: 0.0001
+    renames:
+    - omegabh2
+  omega_cdm:
+    prior:
+      min: 0.001
+      max: 0.99
+    ref:
+      dist: norm
+      loc: 0.12
+      scale: 0.001
+    proposal: 0.0005
+    renames:
+    - omegach2
+  tau_reio:
+    prior:
+      min: 0.01
+      max: 0.8
+    ref:
+      dist: norm
+      loc: 0.054
+      scale: 0.007
+    proposal: 0.003
+    renames:
+    - tau
+  epsilon_T:
+    prior:
+      min: 0.0
+      max: 0.02
+    ref:
+      dist: norm
+      loc: 0.0066
+      scale: 0.002
+    proposal: 0.001
+    latex: \epsilon_T
+  A_planck:
+    prior:
+      dist: norm
+      loc: 1
+      scale: 0.0025
+    ref:
+      dist: norm
+      loc: 1
+      scale: 0.002
+    proposal: 0.0005
+    latex: y_\mathrm{cal}
+    renames: calPlanck
+  calib_100T:
+    prior:
+      dist: norm
+      loc: 1.0002
+      scale: 0.0007
+    ref:
+      dist: norm
+      loc: 1.0002
+      scale: 0.001
+    proposal: 0.0005
+    latex: c_{100}
+    renames: cal0
+  calib_217T:
+    prior:
+      dist: norm
+      loc: 0.99805
+      scale: 0.00065
+    ref:
+      dist: norm
+      loc: 0.99805
+      scale: 0.001
+    proposal: 0.0005
+    latex: c_{217}
+    renames: cal2
+  A_pol:
+    value: 1
+  calib_100P:
+    value: 1.021
+  calib_143P:
+    value: 0.966
+  calib_217P:
+    value: 1.04
+  cib_index:
+    value: -1.3
+  A_cib_217:
+    prior:
+      dist: uniform
+      min: 0
+      max: 200
+    ref:
+      dist: norm
+      loc: 67
+      scale: 10
+    proposal: 1.2
+    latex: A^\mathrm{CIB}_{217}
+    renames: acib217
+  xi_sz_cib:
+    prior:
+      dist: uniform
+      min: 0
+      max: 1
+    ref:
+      dist: halfnorm
+      loc: 0
+      scale: 0.1
+    proposal: 0.1
+    latex: \xi^{\mathrm{tSZ}\times\mathrm{CIB}}
+    renames: xi
+  A_sz:
+    prior:
+      dist: uniform
+      min: 0
+      max: 10
+    ref:
+      dist: norm
+      loc: 7
+      scale: 2
+    proposal: 0.6
+    latex: A^\mathrm{tSZ}_{143}
+    renames: asz143
+  ksz_norm:
+    prior:
+      dist: uniform
+      min: 0
+      max: 10
+    ref:
+      dist: halfnorm
+      loc: 0
+      scale: 3
+    proposal: 1
+    latex: A^\mathrm{kSZ}
+    renames: aksz
+  gal545_A_100:
+    prior:
+      dist: norm
+      loc: 8.6
+      scale: 2
+    ref:
+      dist: norm
+      loc: 7
+      scale: 2
+    proposal: 1
+    latex: A^\mathrm{dustTT}_{100}
+    renames: kgal100
+  gal545_A_143:
+    prior:
+      dist: norm
+      loc: 10.6
+      scale: 2
+    ref:
+      dist: norm
+      loc: 9
+      scale: 2
+    proposal: 1
+    latex: A^\mathrm{dustTT}_{143}
+    renames: kgal143
+  gal545_A_143_217:
+    prior:
+      dist: norm
+      loc: 23.5
+      scale: 8.5
+    ref:
+      dist: norm
+      loc: 21
+      scale: 4
+    proposal: 1.5
+    latex: A^\mathrm{dustTT}_{\mathrm{143}\times\mathrm{217}}
+    renames: kgal143217
+  gal545_A_217:
+    prior:
+      dist: norm
+      loc: 91.9
+      scale: 20
+    ref:
+      dist: norm
+      loc: 80
+      scale: 15
+    proposal: 2
+    latex: A^\mathrm{dustTT}_{217}
+    renames: kgal217
+  A_sbpx_100_100_TT:
+    value: 1
+  A_sbpx_143_143_TT:
+    value: 1
+  A_sbpx_143_217_TT:
+    value: 1
+  A_sbpx_217_217_TT:
+    value: 1
+  ps_A_100_100:
+    prior:
+      dist: uniform
+      min: 0
+      max: 400
+    ref:
+      dist: norm
+      loc: 257
+      scale: 24
+    proposal: 17
+    latex: A^\mathrm{PS}_{100}
+    renames: aps100
+  ps_A_143_143:
+    prior:
+      dist: uniform
+      min: 0
+      max: 400
+    ref:
+      dist: norm
+      loc: 47
+      scale: 10
+    proposal: 3
+    latex: A^\mathrm{PS}_{143}
+    renames: aps143
+  ps_A_143_217:
+    prior:
+      dist: uniform
+      min: 0
+      max: 400
+    ref:
+      dist: norm
+      loc: 40
+      scale: 12
+    proposal: 2
+    latex: A^\mathrm{PS}_{\mathrm{143}\times\mathrm{217}}
+    renames: aps143217
+  ps_A_217_217:
+    prior:
+      dist: uniform
+      min: 0
+      max: 400
+    ref:
+      dist: norm
+      loc: 104
+      scale: 13
+    proposal: 2.5
+    latex: A^\mathrm{PS}_{217}
+    renames: aps217
+  galf_TE_index:
+    value: -2.4
+  galf_TE_A_100:
+    prior:
+      dist: norm
+      loc: 0.13
+      scale: 0.042
+    ref:
+      dist: norm
+      loc: 0.13
+      scale: 0.1
+    proposal: 0.1
+    latex: A^\mathrm{dustTE}_{100}
+    renames: galfTE100
+  galf_TE_A_100_143:
+    prior:
+      dist: norm
+      loc: 0.13
+      scale: 0.036
+    ref:
+      dist: norm
+      loc: 0.13
+      scale: 0.1
+    proposal: 0.1
+    latex: A^\mathrm{dustTE}_{\mathrm{100}\times\mathrm{143}}
+    renames: galfTE100143
+  galf_TE_A_100_217:
+    prior:
+      dist: norm
+      loc: 0.46
+      scale: 0.09
+    ref:
+      dist: norm
+      loc: 0.46
+      scale: 0.1
+    proposal: 0.1
+    latex: A^\mathrm{dustTE}_{\mathrm{100}\times\mathrm{217}}
+    renames: galfTE100217
+  galf_TE_A_143:
+    prior:
+      dist: norm
+      loc: 0.207
+      scale: 0.072
+    ref:
+      dist: norm
+      loc: 0.207
+      scale: 0.1
+    proposal: 0.1
+    latex: A^\mathrm{dustTE}_{143}
+    renames: galfTE143
+  galf_TE_A_143_217:
+    prior:
+      dist: norm
+      loc: 0.69
+      scale: 0.09
+    ref:
+      dist: norm
+      loc: 0.69
+      scale: 0.1
+    proposal: 0.1
+    latex: A^\mathrm{dustTE}_{\mathrm{143}\times\mathrm{217}}
+    renames: galfTE143217
+  galf_TE_A_217:
+    prior:
+      dist: norm
+      loc: 1.938
+      scale: 0.54
+    ref:
+      dist: norm
+      loc: 1.938
+      scale: 0.2
+    proposal: 0.2
+    latex: A^\mathrm{dustTE}_{217}
+    renames: galfTE217
+  galf_EE_index:
+    value: -2.4
+  galf_EE_A_100:
+    value: 0.055
+    latex: A^\mathrm{dustEE}_{100}
+    renames: galfEE100
+  galf_EE_A_100_143:
+    value: 0.04
+    latex: A^\mathrm{dustEE}_{\mathrm{100}\times\mathrm{143}}
+    renames: galfEE100143
+  galf_EE_A_100_217:
+    value: 0.094
+    latex: A^\mathrm{dustEE}_{\mathrm{100}\times\mathrm{217}}
+    renames: galfEE100217
+  galf_EE_A_143:
+    value: 0.086
+    latex: A^\mathrm{dustEE}_{143}
+    renames: galfEE143
+  galf_EE_A_143_217:
+    value: 0.21
+    latex: A^\mathrm{dustEE}_{\mathrm{143}\times\mathrm{217}}
+    renames: galfEE143217
+  galf_EE_A_217:
+    value: 0.7
+    latex: A^\mathrm{dustEE}_{217}
+    renames: galfEE217
+  A_cnoise_e2e_100_100_EE:
+    value: 1
+  A_cnoise_e2e_143_143_EE:
+    value: 1
+  A_cnoise_e2e_217_217_EE:
+    value: 1
+  A_sbpx_100_100_EE:
+    value: 1
+  A_sbpx_100_143_EE:
+    value: 1
+  A_sbpx_100_217_EE:
+    value: 1
+  A_sbpx_143_143_EE:
+    value: 1
+  A_sbpx_143_217_EE:
+    value: 1
+  A_sbpx_217_217_EE:
+    value: 1
+  chi2__BAO:
+    latex: \chi^2_\mathrm{BAO}
+    derived: true
+  chi2__CMB:
+    latex: \chi^2_\mathrm{CMB}
+    derived: true
+  chi2__SN:
+    latex: \chi^2_\mathrm{SN}
+    derived: true
+sampler:
+  mcmc:
+    max_samples: 5000
+    Rminus1_stop: 0.05
+    output_every: 100
+output: results/mcmc_chains/tep_hiclass_reduced
+resume: true

@@ -1,0 +1,15 @@
+# TEP-QF Core Dependencies
+# =======================
+# Pure theory paper — no empirical data pipeline
+
+# Scientific Computing
+numpy>=1.24.0
+scipy>=1.10.0
+sympy>=1.12
+
+# Visualization
+matplotlib>=3.7.0
+
+# Utilities
+tqdm>=4.65.0
+pyyaml>=6.0

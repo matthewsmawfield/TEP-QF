@@ -1,0 +1,172 @@
+<div class="section">
+<h2>2. Proper-Time Phase Transport</h2>
+
+<h3>2.1 The Phase Action</h3>
+<p>
+The fundamental action for a massive particle in the TEP framework is:
+</p>
+<p class="equation">
+S = &minus;mc<sup>2</sup> &int; d&tau;&#771;
+</p>
+<p>
+where <em>&tau;&#771;</em> is the dynamical proper time measured along the particle's worldline in the causal matter metric <em>g&#771;<sub>&mu;&nu;</sub></em>. This is not an abstract phase &mdash; it is the <em>physical accumulated phase</em> of the matter-clock oscillator, whose frequency is set by the local conformal factor <em>A(&phi;)</em>.
+</p>
+
+<p>
+Dimensional analysis confirms the primitive status of this action. The dimensions are:
+</p>
+<p class="equation">
+[S] = [m] [c<sup>2</sup>] [&tau;&#771;] = M L<sup>2</sup> T<sup>&minus;1</sup> = [&hbar;]
+</p>
+<p>
+Thus <em>S/&hbar;</em> is dimensionless, as required for a phase. Given Axiom A2 of Paper 0 &mdash; all non-gravitational processes evolve in the proper time of <em>g&#771;</em> &mdash; this action is the unique Lorentz-invariant, first-order geometric functional of the proper-time interval. The mass <em>m</em> appears not as an inertial parameter but as the frequency of phase accumulation: <em>&omega;<sub>0</sub> = mc<sup>2</sup> / &hbar;</em>.
+</p>
+
+<p>
+The causal matter metric is related to the observed metric <em>g<sub>&mu;&nu;</sub></em> by the conformal transformation:
+</p>
+<p class="equation">
+g&#771;<sub>&mu;&nu;</sub> = A<sup>2</sup>(&phi;) g<sub>&mu;&nu;</sub>
+</p>
+<p>
+In the screened limit, where the observable shear sector <em>&Sigma;<sub>&mu;</sub><sup>obs</sup> &rarr; 0</em> with <em>A(&phi;)</em> normalized to its ambient environmental value, <em>A(&phi;) &rarr; 1</em> and <em>g&#771;<sub>&mu;&nu;</sub> &rarr; g<sub>&mu;&nu;</sub></em>. In the unscreened regime, the particle's phase accumulates along geodesics of the causal metric, not the observed metric.
+</p>
+
+<h3>2.2 The Massive Particle as Proper-Time Oscillator</h3>
+<p>
+A massive particle is defined geometrically as a stable, local proper-time oscillator governed by the causal metric. The oscillator's natural frequency in the flat-frame limit is:
+</p>
+<p class="equation">
+&omega;<sub>0</sub> = mc<sup>2</sup> / &hbar;
+</p>
+<p>
+In the full TEP geometry, this frequency is modulated by the conformal factor:
+</p>
+<p class="equation">
+&omega;<sub>local</sub>(&phi;) = &omega;<sub>0</sub> &middot; A(&phi;)
+</p>
+
+<p>
+Mass parameter and conformal rescaling. The bare mass <em>m</em> enters the primitive action <em>S = &minus;mc<sup>2</sup> &int; d&tau;&#771;</em>. The local oscillator frequency is <em>&omega;<sub>local</sub> = mc<sup>2</sup> A(&phi;) / &hbar;</em>. The Klein-Gordon equation uses the bare parameter <em>m</em> because the conformal modulation is already encoded in the causal d'Alembertian <em>&#9633;&#771;</em> (via <em>A<sup>2</sup></em> in the metric). The effective inertial mass measured by local clock response reduces to <em>m</em> when <em>A &rarr; 1</em> in the screened limit.
+</p>
+
+<h3>2.3 The g&#771;-Hamilton-Jacobi Equation</h3>
+<p>
+The Hamilton-Jacobi equation for the proper-time phase action in the causal metric is:
+</p>
+<p class="equation">
+g&#771;<sup>&mu;&nu;</sup> &part;<sub>&mu;</sub>S &part;<sub>&nu;</sub>S = m<sup>2</sup>c<sup>2</sup>
+</p>
+<p>
+This is the fundamental classical equation governing the phase transport of a massive particle. It is not an operator equation &mdash; it is the Hamilton-Jacobi equation in a curved geometry. The correspondence between the wave equation and this classical equation is constructed geometrically (&sect;2.4) rather than imposed by operator substitution; the quantum sector itself enters through Axiom A2.
+</p>
+
+<p>
+Metric signature convention. Throughout this paper, the metric signature is <em>(+, &minus;, &minus;, &minus;)</em>. In the flat Minkowski limit, with <em>x<sup>0</sup> = ct</em> and <em>&eta;<sub>&mu;&nu;</sub> = diag(1, &minus;1, &minus;1, &minus;1)</em>, the Hamilton-Jacobi equation takes the explicit form:
+</p>
+<p class="equation">
+(&part;<sub>0</sub>S)<sup>2</sup> &minus; |&nabla;S|<sup>2</sup> = A<sup>2</sup>(&phi;) m<sup>2</sup>c<sup>2</sup>
+</p>
+
+<h3>2.4 Deriving the Klein-Gordon Equation from Geometric First Principles</h3>
+<p>
+In the following derivation we set <em>c = &hbar; = 1</em>; dimensional factors are restored in the summary equations. The Klein-Gordon equation is derived as the Euler-Lagrange equation of the minimal scalar-field Lagrangian in the causal metric. The derivation proceeds in three steps.
+</p>
+
+<h4>Step 1: The geometric scalar-field Lagrangian.</h4>
+<p>
+The phase field <em>&Psi;</em> is a complex scalar field propagating on the causal manifold with metric <em>g&#771;<sub>&mu;&nu;</sub></em>. The covariant, second-order Lagrangian for a massive scalar field that reduces to the standard Klein-Gordon Lagrangian in the flat limit is:
+</p>
+<p class="equation">
+L = &#189; ( g&#771;<sup>&mu;&nu;</sup> &part;<sub>&mu;</sub>&Psi;<sup>*</sup> &part;<sub>&nu;</sub>&Psi; &minus; m<sup>2</sup> |&Psi;|<sup>2</sup> )
+</p>
+<p>
+The metric tensor <em>g&#771;<sup>&mu;&nu;</sup></em> raises indices; the inverse metric is <em>g&#771;<sup>&mu;&nu;</sup> = A<sup>&minus;2</sup>(&phi;) g<sup>&mu;&nu;</sup></em>. The bare mass parameter <em>m</em> enters here because it is the only dimensionful parameter available from the primitive action <em>S = &minus;mc<sup>2</sup> &int; d&tau;&#771;</em>. This Lagrangian follows directly from the causal metric <em>g&#771;<sub>&mu;&nu;</sub></em> via minimal coupling; its form is fixed by the geometric structure established in Section 2.1. The linear structure of the resulting wave equation follows from the stationarity condition on this action, exactly as in standard field theory, but now formulated in the causal geometry.
+</p>
+
+<h4>Step 2: Euler-Lagrange equation.</h4>
+<p>
+Varying the action <em>S = &int; L &radic;&minus;g&#771; d<sup>4</sup>x</em> with respect to <em>&Psi;<sup>*</sup></em> gives:
+</p>
+<p class="equation">
+&part;<sub>&mu;</sub> ( &radic;&minus;g&#771; g&#771;<sup>&mu;&nu;</sup> &part;<sub>&nu;</sub>&Psi; ) &minus; &radic;&minus;g&#771; m<sup>2</sup> &Psi; = 0
+</p>
+<p>
+Dividing by <em>&radic;&minus;g&#771;</em> yields the causal d'Alembertian form:
+</p>
+<p class="equation">
+&#9633;&#771; &Psi; + m<sup>2</sup> &Psi; = 0
+</p>
+<p>
+where <em>&#9633;&#771; = (1 / &radic;&minus;g&#771;) &part;<sub>&mu;</sub>( &radic;&minus;g&#771; g&#771;<sup>&mu;&nu;</sup> &part;<sub>&nu;</sub> )</em> is the d'Alembertian operator constructed from the causal metric <em>g&#771;<sub>&mu;&nu;</sub></em>.
+</p>
+
+<h4>Step 3: Connection to the Hamilton-Jacobi equation via WKB / eikonal expansion.</h4>
+<p>
+To verify that this linear wave equation is consistent with the classical Hamilton-Jacobi equation derived in Section 2.3, insert the WKB / eikonal ansatz:
+</p>
+<p class="equation">
+&Psi; = R e<sup>iS/&hbar;</sup> ,   R, S &isin; &#8477;
+</p>
+<p>
+Substituting into <em>(&#9633;&#771; + m<sup>2</sup>) &Psi; = 0</em> and dividing by <em>e<sup>iS/&hbar;</sup></em> yields an equation that can be organised by powers of <em>&hbar;</em>. Before collecting orders, recall the exact decomposition of the causal d'Alembertian established in Step 2. With <em>g&#771;<sub>&mu;&nu;</sub> = A<sup>2</sup>(&phi;) &eta;<sub>&mu;&nu;</sub></em> in the flat-background limit,
+</p>
+<p class="equation">
+&#9633;&#771; = A<sup>&minus;2</sup>(&phi;) (&#9633;<sub>M</sub> + 2 &Sigma;<sup>&mu;</sup> &part;<sub>&mu;</sub>)
+</p>
+<p>
+where <em>&#9633;<sub>M</sub> = &part;<sub>0</sub><sup>2</sup> &minus; &nabla;<sup>2</sup></em> is the Minkowski d'Alembertian. The conformal factor <em>A(&phi;)</em> is the same scalar field-dependent rescaling introduced in Section 2.1; throughout the eikonal expansion it is treated as a prescribed geometric background, not as part of the <em>&hbar;</em>-expansion of <em>&Psi;</em>. Its derivatives <em>&part;<sub>&mu;</sub>A = A &Sigma;<sub>&mu;</sub></em> enter only through the second, temporal-shear term.
+</p>
+
+<p>
+At leading order <em>O(&hbar;<sup>&minus;2</sup>)</em>, the real part recovers the Hamilton-Jacobi equation. The conformal bookkeeping at this order is explicit. From the WKB ansatz, <em>&part;<sub>&nu;</sub>&Psi; = (i / &hbar;) &Psi; &part;<sub>&nu;</sub>S + O(&hbar;<sup>0</sup>)</em>, so the shear term is <em>O(&hbar;<sup>&minus;1</sup>)</em> and does not contribute at <em>O(&hbar;<sup>&minus;2</sup>)</em>. The conformal factor therefore enters the leading order exclusively through the kinetic prefactor <em>A<sup>&minus;2</sup>(&phi;)</em> in the first term: gradients of the phase <em>S</em> are contracted with the inverse causal metric <em>g&#771;<sup>&mu;&nu;</sup> = A<sup>&minus;2</sup>(&phi;) &eta;<sup>&mu;&nu;</sup></em> before any quantum corrections appear. The mass term carries no conformal prefactor (it is the bare parameter <em>m</em> from the primitive action). Collecting the <em>&hbar;<sup>&minus;2</sup></em> coefficients therefore gives
+</p>
+<p class="equation">
+&minus;A<sup>&minus;2</sup>(&phi;) R [(&part;<sub>0</sub>S)<sup>2</sup> &minus; |&nabla;S|<sup>2</sup>] + m<sup>2</sup> R = 0
+</p>
+<p>
+Dividing by <em>R</em> and multiplying by <em>&minus;A<sup>2</sup>(&phi;)</em> immediately yields the <em>g&#771;</em>-Hamilton-Jacobi equation in natural units, with the conformal mass shift <em>A<sup>2</sup>(&phi;)</em> on the right-hand side:
+</p>
+<p class="equation">
+(&part;<sub>0</sub>S)<sup>2</sup> &minus; |&nabla;S|<sup>2</sup> = A<sup>2</sup>(&phi;) m<sup>2</sup>
+</p>
+<p>
+The appearance of <em>A<sup>2</sup>(&phi;)</em> at this order is not an independent postulate; it is the classical signature of propagation on the causal manifold. In the screened limit <em>A &rarr; 1</em>, the equation reduces to the standard Hamilton-Jacobi form; in the unscreened regime, the effective inertia of the phase front is modulated by the local conformal clock-rate rescaling before any <em>O(&hbar;<sup>&minus;1</sup>)</em> transport or <em>O(&hbar;<sup>0</sup>)</em> quantum-potential terms enter.
+</p>
+
+<p>
+At next order <em>O(&hbar;<sup>&minus;1</sup>)</em>, the imaginary part gives the transport equation in the causal metric:
+</p>
+<p class="equation">
+&part;<sub>0</sub>(R<sup>2</sup> &part;<sub>0</sub>S) &minus; &nabla; &middot; (R<sup>2</sup> &nabla;S)
++ 2A<sup>&minus;1</sup>R<sup>2</sup> &eta;<sup>&mu;&nu;</sup>(&part;<sub>&mu;</sub>A)(&part;<sub>&nu;</sub>S) = 0
+</p>
+<p>
+which expresses conservation of the probability current <em>j<sup>&mu;</sup> = R<sup>2</sup> &part;<sup>&mu;</sup>S</em>
+modified by the temporal shear <em>&Sigma;<sub>&mu;</sub> = &part;<sub>&mu;</sub> ln A</em>.
+In the screened limit <em>A &rarr; 1</em>, <em>&part;<sub>&mu;</sub>A &rarr; 0</em>, this reduces to the standard transport equation.
+</p>
+
+<p>
+At finite order <em>O(&hbar;<sup>0</sup>)</em>, the quantum-potential term with shear coupling appears:
+</p>
+<p class="equation">
+A<sup>&minus;2</sup> &#9633;<sub>M</sub> R / R + 2A<sup>&minus;3</sup> &eta;<sup>&mu;&nu;</sup>(&part;<sub>&mu;</sub>A)
+(&part;<sub>&nu;</sub>R) / R
+</p>
+<p>
+which reduces to <em>&#9633;<sub>M</sub> R / R</em> in the screened limit and is suppressed by <em>&hbar;<sup>2</sup></em> relative to the Hamilton-Jacobi term.
+</p>
+
+<p>
+This is the natural point of contact with the quantum-potential term familiar from de Broglie&ndash;Bohm formulations [11]: the standard amplitude-curvature term remains, while TEP supplies an additional shear-coupled geometric correction. TEP does not require a hidden-variable ontology; it identifies the potential-like term as a transport effect of the causal phase geometry.
+</p>
+
+<p>
+The Klein-Gordon equation is thus <em>derived</em> from the minimal geometric Lagrangian in the causal metric, and its eikonal limit is verified to coincide with the <em>g&#771;</em>-Hamilton-Jacobi equation. The inputs are the causal metric <em>g&#771;<sub>&mu;&nu;</sub></em>, the bare mass <em>m</em> from the primitive action, and the standard scalar-field Lagrangian minimally coupled to that metric. No operator substitution is required.
+</p>
+
+<p>
+In the screened limit <em>g&#771;<sub>&mu;&nu;</sub> &rarr; &eta;<sub>&mu;&nu;</sub></em> and the standard Klein-Gordon equation is recovered. In the unscreened regime, the causal d'Alembertian encodes the full geometric structure of the temporal field, including additional temporal-shear coupling terms proportional to <em>&part;<sub>&mu;</sub>A</em>.
+</p>
+</div>

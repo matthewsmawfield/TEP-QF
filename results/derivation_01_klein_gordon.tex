@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{Derivation 1: Klein-Gordon as the Linear Phase-Field Equation}
+
+\textbf{Metric signature:} $(+, -, -, -)$ throughout.
+
+The \emph{g\~{}}-Hamilton-Jacobi equation in the causal metric
+$\tilde{g}_{\mu\nu} = A^2(\phi)\,\eta_{\mu\nu}$:
+\[
+(\partial_t S)^2 - |\nabla S|^2 = A^2(\phi)\,m^2 c^2 .
+\]
+
+Start from the \emph{linear} wave equation in the causal metric,
+$(\tilde{\Box} + m^2 c^2/\hbar^2)\Psi = 0$, and insert the
+WKB / eikonal ansatz
+\[
+\Psi = R \, e^{iS/\hbar}, \qquad R, S \in \mathbb{R} .
+\]
+
+The causal d'Alembertian for $\tilde{g}_{\mu\nu} = A^2\eta_{\mu\nu}$ is
+\[
+\tilde{\Box} = A^{-2}\Box_M + 2A^{-3}\,\eta^{\mu\nu}(\partial_\mu A)\,\partial_\nu ,
+\]
+where $\Box_M = \partial_t^2 - \nabla^2$ is the Minkowski d'Alembertian.
+Dividing the wave equation by $e^{iS/\hbar}$ and collecting powers of
+$\hbar$ yields three orders:
+
+\begin{itemize}
+\item \textbf{O($\hbar^{-2}$):} the Hamilton-Jacobi equation
+  \[
+  (\partial_t S)^2 - |\nabla S|^2 = A^2 m^2 c^2 .
+  \]
+\item \textbf{O($\hbar^{-1}$):} the transport equation with temporal-shear correction
+  \[
+  \partial_t(R^2\,\partial_t S) - \nabla\cdot(R^2\,\nabla S)
+  + 2A^{-1}R^2\,\eta^{\mu\nu}(\partial_\mu A)(\partial_\nu S) = 0 ,
+  \]
+  i.e.~conservation of the probability current $j^\mu = R^2\,\partial^\mu S$
+  modified by the temporal shear $\Sigma_\mu = \partial_\mu\ln A$.
+  In the screened limit $A\to 1$, $\partial_\mu A\to 0$, this reduces to
+  the standard transport equation.
+\item \textbf{O($\hbar^{0}$):} the quantum-potential term with shear coupling
+  \[
+  A^{-2}\frac{\Box_M R}{R} + 2A^{-3}\,\eta^{\mu\nu}(\partial_\mu A)
+  \frac{\partial_\nu R}{R} ,
+  \]
+  which reduces to $\Box_M R/R$ in the screened limit and is suppressed
+  by $\hbar^2$ relative to the HJ term.
+\end{itemize}
+
+\textbf{Physical interpretation.}
+The Klein-Gordon operator is recovered as the linear stationary
+phase-field equation whose eikonal limit is the
+$\tilde{g}$-Hamilton-Jacobi equation.  It is not derived from the HJ
+equation by operator substitution; rather, the HJ equation is the
+leading-order (classical) limit of the linear wave equation.
+
+In the screened limit $A(\phi)\to 1$, $\tilde{\Box}\to\Box_M$ and the
+standard Klein-Gordon equation is recovered.  In the unscreened regime
+the causal d'Alembertian encodes additional temporal-shear coupling
+terms proportional to $\partial_\mu A$.
+
+\textbf{Mass parameter.}  The bare mass $m$ enters the primitive action
+$S = -mc^2\int d\tilde{\tau}$.  The local oscillator frequency is
+$\omega_{\rm local} = mc^2 A(\phi)/\hbar$.  The KG equation uses the
+bare parameter $m$ because the conformal modulation is already
+contained in $\tilde{\Box}$; the effective inertial mass measured by
+local clock response reduces to $m$ when $A\to 1$.
+
+\end{document}

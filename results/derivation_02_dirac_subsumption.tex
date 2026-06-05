@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{Derivation 2: The Dirac Operator as Local Tetrad Representation}
+
+The full geometric Dirac operator in the causal matter metric:
+\[
+\left( i e^\mu_a \gamma^a \nabla_\mu - m \right) \psi = 0
+\]
+where $e^\mu_a$ is the tetrad field and $\nabla_\mu$ is the spin-covariant derivative.
+
+\textbf{Artificial Flattening:} Force temporal shear to zero:
+\[
+\Sigma_\mu = \nabla_\mu \ln A(\phi) = 0 \;\Rightarrow\; A(\phi) = 1
+\]
+This makes $\tilde{g}_{\mu\nu} = \eta_{\mu\nu}$, so:
+\begin{itemize}
+\item Tetrad becomes identity: $e^\mu_a \to \delta^\mu_a$
+\item Spin connection vanishes: $\omega_{ab\mu} \to 0$
+\item Covariant derivative reduces to partial: $\nabla_\mu \to \partial_\mu$
+\end{itemize}
+
+The full operator collapses to the standard Dirac equation:
+\[
+(i \gamma^\mu \partial_\mu - m) \psi = 0
+\]
+
+\textbf{Physical Interpretation:} The standard Dirac equation is the local limit of the geometric operator. It emerges in the screened regime, where the local interaction energy density substantially exceeds the Temporal Topology saturation scale $\rho_c \approx 20\,\mathrm{g/cm}^3$, the conformal factor $A(\phi) \to 1$, and temporal shear is negligible. The geometric framework is richer; the standard equation captures the local, screened limit.
+
+\end{document}
