@@ -11,17 +11,26 @@
       "@id": "https://orcid.org/0009-0003-8219-3159"
     }
   ],
-  "version": "v0.1 (Qatar)",
-  "datePublished": "2026-06-12",
+  "version": "v0.2 (Qatar)",
+  "datePublished": "2026-06-13",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "codeRepository": "https://github.com/matthewsmawfield/TEP-QF",
   "url": "https://mlsmawfield.com/tep/qf/",
   "keywords": [
+    "Temporal Equivalence Principle",
+    "Temporal Shear",
+    "Temporal Topology",
+    "proper time",
+    "conformal metric",
+    "disformal metric",
+    "synchronization holonomy",
+    "clock-sector gravity",
+    "scalar-tensor theory",
     "quantum foundations",
     "Dirac equation",
-    "proper time",
     "phase transport",
-    "temporal equivalence principle",
+    "spin",
+    "antimatter",
     "geometric quantum mechanics"
   ]
 }

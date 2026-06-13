@@ -1,7 +1,6 @@
-v0.1 (Qatar) - Initial release of TEP-QF manuscript
+v0.2 (Qatar) — Single-sheeted antiparticle ontology and topological conservation — 13 June 2026
 
-- Proper-time phase transport formalism
-- Derivation of Klein-Gordon and Dirac operators from dynamical proper-time geometry
-- Spin and antimatter as temporal-orientation holonomy
-- Reinterpretation of the Dirac spinor as a historical artifact of flat-frame algebraic encoding
-- Recovery of the KG–Dirac sector of relativistic quantum theory as the screened tangent limit
+- Antiparticle ontology reframed: orientation-conjugate modes within a single-sheeted spacetime, eliminating two-sheeted manifold language
+- Topological conservation introduced at the pair-production decoupling vertex
+- Terminology unified: "temporal-orientation bundle" replaces "bipartite orientation bundle"; "antiparticles" replaces "antimatter"
+- Cosmology pointer in §1.5 softened to a clock-rate mechanism reference

@@ -21,11 +21,11 @@
   "title": "Temporal Equivalence Principle: The Dirac Limit of Dynamical Proper Time",
   "short_title": "TEP-QF: Quantum Foundations",
   "author": "Matthew Lukin Smawfield",
-  "version": "v0.1",
+  "version": "v0.2",
   "codename": "Qatar",
-  "date": "2026-06-12",
+  "date": "2026-06-13",
   "first_published": "12 June 2026",
-  "doi": "10.5281/zenodo.20572698",
+  "doi": "10.5281/zenodo.20572697",
   "sections": [
     {
       "id": "section-abstract",

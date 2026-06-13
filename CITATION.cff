@@ -20,17 +20,17 @@ abstract: 'Standard relativistic quantum mechanics, including the Klein–Gordon
   is recovered as the local Clifford/tetrad representation in the isochronous background
   — it emerges in the limit where temporal shear Σ_{μ} and disformal coupling B(φ)
   are negligible. (4) Spin-1/2 is reinterpreted as temporal-orientation holonomy of
-  the proper-time phase frame, and antimatter as reversed phase orientation on the
-  second sheet of the two-sheeted temporal manifold. (5) The spinor structure of relativistic
-  quantum mechanics may be reinterpreted geometrically: Dirac''s 1928 spinor encoded
+  the proper-time phase frame, and antiparticles as reversed proper-time orientation within
+  the temporal-orientation bundle, eliminating the need for a macroscopic two-sheeted spacetime. (5) The spinor structure of relativistic
+  quantum mechanics may be reinterpreted geometrically: Dirac's 1928 spinor encoded
   temporal-orientation holonomy without access to a dynamical proper-time geometry.
   These results recover standard relativistic quantum mechanics as the screened tangent-space
   limit of the TEP causal geometry, in the regime where the temporal field is frozen and locally constant over the interaction scale; the saturation scale ρ_T ≈ 20 g/cm³ is empirically calibrated in TEP-UCD (Paper 6).'
-version: v0.1 (Qatar)
-date-released: 2026-06-12
+version: v0.2 (Qatar)
+date-released: 2026-06-13
 url: https://mlsmawfield.com/tep/qf
 repository-code: https://github.com/matthewsmawfield/TEP-QF
-doi: 10.5281/zenodo.20572698
+doi: 10.5281/zenodo.20572697
 license: CC-BY-4.0
 keywords:
 - Temporal Equivalence Principle
@@ -59,4 +59,4 @@ preferred-citation:
   year: 2026
   journal: Zenodo
   url: https://mlsmawfield.com/tep/qf
-  notes: Preprint v0.1 (Qatar)
+  notes: Preprint v0.2 (Qatar)
