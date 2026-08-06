@@ -1,7 +1,7 @@
 # Temporal Equivalence Principle: The Dirac Limit of Dynamical Proper Time
 **Matthew Lukin Smawfield**
 Version: v0.2 (Qatar)
-First published: 12 June 2026 · Last updated: 13 June 2026
+First published: 12 June 2026 · Last updated: 2 July 2026
 DOI: 10.5281/zenodo.20572697
 
 ---
@@ -19,6 +19,10 @@ Keywords: quantum foundations, Dirac equation, proper time, phase transport, spi
 ### 1.1 The External-Metric Postulate
 
 Every equation of quantum mechanics — from the Schrödinger equation to the Dirac equation, from the path integral to the operator formalism of Quantum Field Theory — is formulated on a prescribed spacetime background. The metric *g_{μν}* is not dynamical in the quantum sector; it is an external input, fixed either as the Minkowski metric *η_{μν}* in flat-space QFT or as a classical solution to Einstein's equations in QFT in curved spacetime. In neither case does the quantum field back-react on the temporal geometry. Proper time *τ* is computed from a metric that is unaffected by the quantum state of the matter fields it governs.
+
+**Screening projection notice.** Screening in TEP is represented at theory level by the environmental operator S_Σ(E). Quantities such as ρ_T, R_T(M), S_⊕(r), compactness Φ/c^2, local stellar density, thermal epoch, coherence length, proximity, and boundary geometry are domain-specific projections of E, not independent screening mechanisms and not interchangeable universal thresholds.
+
+**Evidence status.** This paper is classified as a *candidate microscopic completion* in the TEP corpus. It derives the Klein–Gordon and Dirac operators as the screened tangent limit of a dynamical proper-time geometry, but full Born-rule recovery, gauge-invariant interaction structure, and quantitative QED matching remain open closure tasks. The antiparticle reinterpretation, wavefunction-collapse model, and entanglement ontology presented here are theoretical proposals, not empirically validated replacements for standard quantum mechanics. The results should be evaluated as structural exploration rather than as direct empirical proof of TEP.
 
 This is not a bug in the formalism; it is a deliberate approximation. The energy scales of known particle physics are so far below the Planck scale that gravitational back-reaction is negligible. However, the approximation becomes a structural limitation when one asks whether the quantum state itself — the phase coherence, the entanglement, the spin orientation — might be fundamentally tied to the geometry that the metric describes. In standard relativistic quantum theory, the metric is a stage; the quantum fields are actors. The Temporal Equivalence Principle reverses this hierarchy.
 
@@ -268,6 +272,8 @@ The flattening conditions correspond to the screened limit, where the observable
 
 The standard Dirac equation is thus the *screened limiting case* of the geometric operator, valid in the regime where the geometric structure of the temporal field is negligible. For collider processes the relevant statement is kinematic: the scalar field's configuration is set by boundary conditions over its correlation length (*L_{c} ≈ 4 × 10^{3} km* in the terrestrial calibration of Paper 6), so across the ~10^{−18} m, ~10^{−27} s extent of a TeV-scale interaction the field is frozen and locally constant — *Σ_{μ} ≈ 0* and *B(φ)(∇φ)^{2} ≈ 0* over the entire interaction region. A frozen, locally constant field is precisely the tangent-space limit derived above. The KG–Dirac and perturbative-QFT descriptions therefore remain exact for currently accessible particle-physics experiments, while long-baseline, long-integration interferometry — which accumulates phase over scales comparable to field gradients — is the probe class that can resolve the unscreened structure.
 
+The operator collapse of the curved-space Dirac equation into the flat-space Dirac limit serves as the quantum-geometric realization of the abstract environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$. The saturation of the Temporal Topology at the Compton scale $r_c$ acts here as the physical proxy for $\mathcal{S}_\Sigma(\mathcal{E})$, yielding the standard flat-space behavior without committing to specific chameleon or symmetron microphysics.
+
 ### 3.4 Geometric Reinterpretation of Spinor Structure
 
 The KG–Dirac tangent-limit derivation shows that the standard Dirac equation is recovered within the TEP framework as the screened limit. The TEP framework further provides a geometric reinterpretation of the spinor structure that Dirac introduced in 1928.
@@ -384,7 +390,7 @@ The standard relativistic quantum framework is recovered as the screened limit o
 
 - Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.9 (Jakarta). Zenodo. DOI: 10.5281/zenodo.16921911 (Paper 0)
 
-- Smawfield, M. L. (2025). *Universal Critical Density: Cross-Scale Consistency of ρ_{T}*. Preprint v0.6 (New Delhi). Zenodo. DOI: 10.5281/zenodo.18064365 (Paper 6)
+- Smawfield, M. L. (2025). *Temporal Topology Saturation Scale: Cross-Scale Consistency of ρ_{T}*. Preprint v0.6 (New Delhi). Zenodo. DOI: 10.5281/zenodo.18064365 (Paper 6)
 
 - Smawfield, M. L. (2026). *Temporal Equivalence Principle: Disformal Kinematics and the Measurement Landscape*. Preprint v0.1 (Kuala Lumpur). Zenodo (Paper 25)
 

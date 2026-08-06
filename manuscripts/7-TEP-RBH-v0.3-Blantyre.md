@@ -10,7 +10,7 @@ Paper: 7 (TEP Series)
 ## Abstract
 The runaway supermassive black hole RBH-1 ($z \approx 0.96$) presents a thermal paradox: JWST spectroscopy reveals a 650 km/s velocity discontinuity coexisting with cold, star-forming gas. Higher-resolution Keck/LRIS spectroscopy yields a narrow apex dispersion ($\sigma \approx 31 \pm 4$ km/s), far below the $\sigma \sim 80$–85 km/s expected if the emitting gas were predominantly at $T \sim 10^7$ K. Standard shock physics predicts post-shock temperatures $T \sim 10^7$ K, yielding a cooling time that exceeds the dynamical time by a factor of ~30. Yet the wake exhibits immediate star formation and extreme collimation (50:1 aspect ratio over 62 kpc).
 RBH-1 is explored as a candidate Temporal Topology soliton/wake interpretation: a coherent region of altered proper-time rate. Under this candidate framing, the observed velocity discontinuity is reinterpreted as a metric shock (spatial gradient in gravitational redshift) rather than bulk thermalization, and the effective Jeans mass is reduced behind the front via time dilation, enabling immediate star formation without heating.
-The characteristic temporal scale $R_T$, calibrated from terrestrial GNSS correlations (Smawfield 2025g), is applied as a consistency check rather than as proof that RBH-1 is a soliton. For RBH-1 ($M \approx 2 \times 10^7 M_\odot$), the calibration yields $R_T \approx 7.8 \times 10^7$ km $\approx 1.3 R_S$, comparable to the near-source transition scale, not the full 62 kpc wake length. The amplitude of the observed kinematic discontinuity depends on screening/transition physics (via $\beta_{\rm eff}$ at $R_{\rm trans}$) and is treated as an empirical constraint rather than an independent prediction. Specific falsification criteria are outlined; decisive discrimination awaits line-profile decomposition and X-ray flux limits.
+The characteristic temporal scale $R_T$, calibrated from terrestrial GNSS correlations (Smawfield 2025g), is applied as a consistency check rather than as proof that RBH-1 is a soliton. For RBH-1 ($M \approx 2 \times 10^7 M_\odot$), the calibration yields $R_T \approx 7.8 \times 10^7$ km $\approx 1.3 R_S$, comparable to the near-source transition scale, not the full 62 kpc wake length. The amplitude of the observed kinematic discontinuity depends on screening/transition physics (via $\alpha_{\rm RBH,eff}$ at $R_{\rm trans}$) and is treated as an empirical constraint rather than an independent prediction. Specific falsification criteria are outlined; decisive discrimination awaits line-profile decomposition and X-ray flux limits.
 *Keywords:* black holes: individual (RBH-1) – dark matter – gravitation – scalar fields – temporal equivalence principle
 
 ## 1. Introduction: The RBH-1 Anomaly
@@ -131,10 +131,12 @@ The soliton is treated here as an effective phenomenological description—a mac
 ![Anatomy of the Temporal Soliton Wake](site/figures/figure_03_wake_anatomy.png)
 Figure 3: The Anatomy of the Wake. *Left (turbulent/hot):* A standard hydrodynamic model, where a physical projectile generates turbulence and post-shock heating ($T \gtrsim 10^7$ K). Kelvin-Helmholtz instabilities disrupt the wake boundary, and the Jeans length exceeds 100 kpc, suppressing sub-kpc fragmentation. *Right (laminar/cold):* A metric-shock model, where a propagating region of time dilation produces a coherent disturbance without bulk thermalization. Gas remains near $T \sim 10^4$ K, the wake boundary stays sharp (aspect ratio 50:1), and fragmentation into star-forming clumps is permitted. This left–right contrast provides a qualitative discriminant between models.
 
-The characteristic density $\rho_T \approx 20$ g/cm³, which governs the temporal scale, is not a free parameter in this analysis. It is an external input derived from terrestrial constraints in the companion "Universal Critical Density" paper (Smawfield 2025g). This analysis tests whether this specific value, calibrated on Earth, correctly predicts the wake properties of a distant supermassive black hole.
+The characteristic density $\rho_T \approx 20$ g/cm³, which governs the temporal scale, is not a free parameter in this analysis. It is an external input derived from terrestrial constraints in the companion "Temporal Topology Saturation Scale" paper (Smawfield 2025g). This analysis tests whether this specific value, calibrated on Earth, correctly predicts the wake properties of a distant supermassive black hole.
 
 #### Box 2.1: Model Scope
 Detailed field equations and Lagrangian derivations are provided in Smawfield (2025a, *TEP-GTE*) and Smawfield (2025g, *TEP-UCD*). This paper focuses strictly on the Astrophysical Forward Model: given a characteristic density $\rho_T \approx 20$ g/cm³, what are the observable kinematic and thermodynamic signatures of a $10^7 M_\odot$ soliton traversing the circumgalactic medium?
+
+The characteristic temporal scale $R_T$, while calibrated from terrestrial geodetics, operates here as the astrophysical geometric realization of the abstract environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$. Modeling the RBH-1 wake as a candidate Temporal Topology soliton uses this geometric saturation profile to trace the continuous un-screening of the temporal shear field behind the metric shock, distinguishing it fundamentally from standard bulk thermalization models.
 
 ## Forward Model: From Field Gradient to Velocity Shift
 
@@ -154,14 +156,14 @@ A critical distinction must be made between the core radius and the transition r
 
 The connection is that $R_{\rm trans}$ is not arbitrary; it scales with the core mass. In the TEP framework, the continuous spatial profile of the chameleon field (Temporal Topology) governs the transition scale. While the exact prefactor depends on the coupling strength, the *existence* of a transition zone at $\sim$kpc scales for a $10^7 M_\odot$ object is a consequence of the underlying temporal topology geometry. The "shock" observed at the RBH-1 tip corresponds to the gradient of $A(\phi)$ at this transition boundary, where Temporal Shear has recovered sufficiently to produce an observable metric effect.
 
-For a weak-field conformal coupling, $A(\phi) \approx 1 + 2\beta_{\text{eff}}\Phi/c^2$ where $\Phi = -GM/r$ is the Newtonian potential and $\beta_{\text{eff}}$ is the effective coupling strength (scalar charge) at the transition boundary where Temporal Shear has recovered. Substituting into the apparent velocity formula:
+For a weak-field conformal coupling, $A(\phi) \approx 1 + 2\alpha_{\text{RBH,eff}}\Phi/c^2$ where $\Phi = -GM/r$ is the Newtonian potential and $\alpha_{\text{RBH,eff}}$ is the effective coupling strength (scalar charge) at the transition boundary where Temporal Shear has recovered. Substituting into the apparent velocity formula:
 
-\begin{equation} \label{eq:velocity_discontinuity} v_{\text{app}} \approx c \left( \frac{1}{1 - 2\beta_{\text{eff}}GM/(R_{\text{trans}} c^2)} - 1 \right) \approx \beta_{\text{eff}} \frac{GM}{R_{\text{trans}} c} \end{equation}
+\begin{equation} \label{eq:velocity_discontinuity} v_{\text{app}} \approx c \left( \frac{1}{1 - 2\alpha_{\text{RBH,eff}}GM/(R_{\text{trans}} c^2)} - 1 \right) \approx \alpha_{\text{RBH,eff}} \frac{GM}{R_{\text{trans}} c} \end{equation}
 
 #### Box 2.2: The Temporal Shear Constraint
 A naive application of the full field gradient at the core radius ($R \sim 1.3 R_S$) would imply a relativistic redshift $z \sim 0.25$ ($v \sim 75,000$ km/s), drastically exceeding the observed $\sim 650$ km/s. This discrepancy is physically instructive: it indicates that the Temporal Shear must be strongly suppressed near the compact object. In the deep density well of the core, the Temporal Topology is flattened, driving the local field gradient toward zero and ensuring that the scalar contribution to the metric remains negligible in the interior.
 The observed velocity discontinuity ($v \approx 650$ km/s) combined with the transition scale ($R_{\text{trans}} \sim 1$ kpc) constrains the effective coupling product at the radius where Temporal Shear has recovered:
-\begin{equation} \label{eq:coupling_constraint} \beta_{\text{eff}} \frac{GM}{R_{\text{trans}} c^2} \sim \frac{v}{c} \sim 2 \times 10^{-3} \end{equation}
+\begin{equation} \label{eq:coupling_constraint} \alpha_{\text{RBH,eff}} \frac{GM}{R_{\text{trans}} c^2} \sim \frac{v}{c} \sim 2 \times 10^{-3} \end{equation}
 This implies that while the *geometric* structure of the soliton candidate is governed by the characteristic density $\rho_T$, the *amplitude* of the metric shock reflects the recovered Temporal Shear at the transition radius, consistent with the scalar field being a sub-dominant component of the total potential.
 
 ### Predicting Line Widths (The Discriminator)
@@ -214,6 +216,23 @@ discontinuity Δv ~ 650 km/s arises from a spatial gradient in the conformal
 factor A(φ), which relates the matter metric to the gravitational metric via
 $\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu}$. This section derives the required
 field parameters and checks for internal consistency.
+
+Screening in TEP is represented at the theory level by the environmental operator
+*S*&Sigma;(*&Epsilon;*).
+Quantities such as
+&rho;T,
+*R*T(*M*),
+*S*&oplus;(*r*),
+compactness &Phi;/*c*2,
+local stellar density,
+geometric coherence length,
+and channel-specific response coefficients
+are domain-specific projections of *&Epsilon;*,
+not independent screening mechanisms
+and not interchangeable universal thresholds.
+Each is an observational transfer model
+that parameterizes the same underlying operator
+in a regime-appropriate form.
 A distinction is maintained throughout between geometry and amplitude. The
 temporal scale (and associated geometric scaling) is fixed
 *a priori* by $\rho_T$ (Paper 6), while the magnitude of the apparent
@@ -230,13 +249,13 @@ empirical constraint rather than an independent free fit.
 (M/\rho_T)^{1/3}$. |
 | **Temporal Scale** ($R_T$) | **Prediction** | Derived from $\rho_T, M$ | $\approx 1.3 R_S$. **Consistency Check:** Matches observed
 wake onset morphology. |
-| **Coupling Strength** ($\beta_{\text{eff}}$) | **Constraint** | Fitted to Data | constrained by $\Delta v \approx 650$ km/s. |
-| **Velocity Jump** ($\Delta v$) | Constraint | Observation | Used to set $\beta_{\text{eff}}$; NOT a prediction. |
+| **Coupling Strength** ($\alpha_{\text{RBH,eff}}$) | **Constraint** | Fitted to Data | constrained by $\Delta v \approx 650$ km/s. |
+| **Velocity Jump** ($\Delta v$) | Constraint | Observation | Used to set $\alpha_{\text{RBH,eff}}$; NOT a prediction. |
 | **Line Width** ($\sigma$) | **Prediction** | Soliton Physics | Predicted narrow ($\ll \Delta v$) due to cold metric gradient. |
 Box 3.0: Origin of the Characteristic Density ($\rho_T \approx 20$ g/cm³)
 The value $\rho_T \approx 20$ g/cm³ is not a free parameter tuned for
 RBH-1. It is derived in the companion paper
-*Universal Critical Density* (Smawfield 2025g) strictly from an
+*Temporal Topology Saturation Scale* (Smawfield 2025g) strictly from an
 analysis of terrestrial atomic clocks, independent of any astrophysical
 data.
 *Summary of Derivation:*
@@ -327,7 +346,7 @@ with sharp density cutoffs, TEP screening operates through continuous field grad
 flattening. The Temporal Shear is gradually suppressed in deep potential wells,
 avoiding the fine-tuning problems of thin-shell approximations while maintaining
 fifth-force suppression in dense environments.
-\begin{equation} \label{eq:screening_factor} S = \frac{\beta_0}{\beta_{\text{eff}}} \propto
+\begin{equation} \label{eq:screening_factor} S = \frac{\beta_0}{\alpha_{\text{RBH,eff}}} \propto
 \left(\frac{\rho}{\rho_T}\right)^{1/3} \end{equation}
 For RBH-1 at the crossover mass (M ~ 10⁷ M_☉, ρ ~ ρ_T ~ 20 g/cm³), the
 suppression factor is S ~ 1, meaning the Temporal Shear is near the
@@ -712,7 +731,7 @@ Smawfield, M. L. (2025). *Temporal-Spatial Coupling in Gravitational Lensing: A 
 
 Smawfield, M. L. (2025). *Global Time Echoes: Empirical Synthesis*. Preprint v0.4 (Singapore). Zenodo. DOI: [10.5281/zenodo.18004832](https://doi.org/10.5281/zenodo.18004832) (Paper 5)
 
-Smawfield, M. L. (2025). *Universal Critical Density: Cross-Scale Consistency of ρ_T*. Preprint v0.3 (New Delhi). Zenodo. DOI: [10.5281/zenodo.18064365](https://doi.org/10.5281/zenodo.18064365) (Paper 6)
+Smawfield, M. L. (2025). *Temporal Topology Saturation Scale: Cross-Scale Consistency of ρ_T*. Preprint v0.3 (New Delhi). Zenodo. DOI: [10.5281/zenodo.18064365](https://doi.org/10.5281/zenodo.18064365) (Paper 6)
 
 Smawfield, M. L. (2025). *The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate*. Preprint v0.3 (Blantyre). Zenodo. DOI: [10.5281/zenodo.18059250](https://doi.org/10.5281/zenodo.18059250) (Paper 7 — this work)
 
