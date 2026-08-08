@@ -74,6 +74,16 @@ parameters:
     used_in: [21]
     description: "Threshold mass where phi_mass ~ beta_geom."
 
+  - symbol: "kappa_Gal"
+    latex: "\\kappa_{\\text{Gal}}"
+    meaning: "Canonical galaxy-scale observable response coefficient"
+    value: 9.6e5
+    units: "mag"
+    class: "calibrated"
+    first_paper: 11
+    used_in: [11, 12]
+    description: "Expected bare-scale coupling for Cepheid P-L shifts before environmental screening. Used as prior in multi-anchor regression. Consistent with TEP geometric-factor estimate."
+
   - symbol: "kappa_Cep"
     latex: "\\kappa_{\\text{Cep}}"
     meaning: "Cepheid observable response coefficient"

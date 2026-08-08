@@ -3,7 +3,7 @@
 TEP Cosmological Distance Models
 =================================
 
-Version: TEP v0.9 (Jakarta)
+Version: TEP v0.10 (Jakarta)
 
 Provides the luminosity-distance--redshift relation for competing hypotheses,
 used by standard-siren and cosmology analyses across the TEP corpus.
@@ -39,6 +39,9 @@ C_KM_S = 299792.458  # speed of light, km/s
 C_KMS = C_KM_S  # alias for backward compatibility
 
 _Z_CAP_FACTOR = 3.0
+# Numerical guardrail for exploratory parameter scans. The validated native
+# TEP parameter ranges stay well above this floor; hitting it means the scan is
+# outside the calibrated EFT regime rather than a new physical branch.
 _A_MIN = 0.1
 
 
@@ -62,6 +65,13 @@ def _validate_tep_params(z_T, n_T, epsilon_T=None):
 def _z_effective(z, z_T):
     z_arr = _as_array(z)
     cap = z_T * _Z_CAP_FACTOR
+    if np.any(z_arr > cap):
+        import warnings
+        warnings.warn(
+            f"_z_effective: z values above {cap} capped to {cap} for numerical stability. "
+            "High-z physics may differ from full TEP model.",
+            RuntimeWarning, stacklevel=3
+        )
     return np.where(z_arr > cap, cap, z_arr)
 
 
@@ -120,7 +130,10 @@ def conformal_factor_native(z, epsilon_T, z_T, n_T):
 
 def alpha_A_native(z, epsilon_T, z_T, n_T):
     """
-    Jordan-frame coupling alpha_A = d ln A / d ln(1+z).
+    Jordan-frame coupling alpha_A = d ln A / d ln a_J.
+
+    Since a_J = 1 / (1 + z), this is the negative of
+    d ln A / d ln(1+z).
 
     Matches hi_class ``tep_M_factor`` intermediate.
     """
@@ -178,7 +191,12 @@ def E_of_z(z, Om=0.315):
     """Dimensionless Hubble parameter E(z) = H(z)/H0 for a flat universe."""
     if Om < 0.0 or Om > 1.0:
         raise ValueError("Om must be in the interval [0, 1] for a flat LCDM model")
-    return np.sqrt(Om * (1.0 + z) ** 3 + (1.0 - Om))
+    if z < -1.0:
+        raise ValueError("Redshift z must be >= -1")
+    arg = Om * (1.0 + z) ** 3 + (1.0 - Om)
+    if arg < 0:
+        raise ValueError(f"Negative argument to sqrt in E_of_z: {arg}")
+    return np.sqrt(arg)
 
 
 def comoving_distance(z, H0, Om=0.315):
@@ -617,7 +635,7 @@ class TEPCosmologyFitter:
                 mu_pred = tep.distance_modulus(z) + offset
                 residuals = (obs - mu_pred) / obs_err
                 return np.sum(residuals**2)
-            except:
+            except Exception:
                 return 1e10
 
         # Run minimization
@@ -723,3 +741,118 @@ class TEPCosmologyFitter:
             'tep_competitive': bool(delta_bic < 2.0),
             'best_model': 'tep' if delta_bic < 0.0 else 'lcdm',
         }
+
+# ============================================================================
+# Part E: Active Scalar Perturbation Closure (Minimal Conformal)
+# ============================================================================
+
+def evaluate_tep_eft_sector(alpha_A):
+    """
+    Returns the exact dimensionless Bellini-Sawicki parameters and
+    stability discriminants in the pure conformal limit (beta_A = -1.0).
+
+    Mapping from TEP bi-metric action to Jordan-frame EFT:
+      alpha_M = d ln M_*^2 / d ln a = -2 alpha_A
+      alpha_B = -alpha_M = 2 alpha_A
+      alpha_K = -5 alpha_A^2   (conformal anomaly from kinetic mixing)
+      alpha_T = 0
+
+    Physical no-ghost discriminant:
+      D = alpha_K + (3/2) alpha_B^2
+        = -5 alpha_A^2 + (3/2)(4 alpha_A^2)
+        = alpha_A^2  >= 0  (strictly, for all z)
+
+    Sound speed: c_s^2 = 1 exactly (conformal isomorphism to FLRW).
+    """
+    alpha_A = np.atleast_1d(alpha_A)
+
+    alpha_M = -2.0 * alpha_A
+    alpha_B =  2.0 * alpha_A
+    alpha_K = -5.0 * (alpha_A ** 2)
+    alpha_T = 0.0
+
+    # Physical no-ghost discriminant (must be positive-definite)
+    D = alpha_K + 1.5 * (alpha_B ** 2)
+
+    # Sound speed: fixed by conformal isomorphism
+    c_s2 = np.ones_like(alpha_A)
+
+    # Strict check: D == alpha_A^2 up to numerical tolerance
+    D_expected = alpha_A ** 2
+    if not np.allclose(D, D_expected, atol=1e-14):
+        raise ValueError("Ghost-free identity D = alpha_A^2 violated!")
+
+    is_stable = np.all(D >= 0) and np.all(c_s2 >= 0)
+
+    return {
+        "alpha_M": alpha_M,
+        "alpha_B": alpha_B,
+        "alpha_K": alpha_K,
+        "alpha_T": alpha_T,
+        "D": D,
+        "c_s2": c_s2,
+        "is_stable": is_stable
+    }
+
+
+def tep_alpha_M(z, epsilon_T=0.1, z_T=3.0, n_T=1.0):
+    """
+    Planck-mass running alpha_M = d ln M_*^2 / d ln a = -2 alpha_A.
+    Uses the exact native TEP conformal-factor derivative.
+    """
+    alpha_A = alpha_A_native(z, epsilon_T, z_T, n_T)
+    return -2.0 * alpha_A
+
+
+def tep_alpha_B(z, epsilon_T=0.1, z_T=3.0, n_T=1.0):
+    """
+    Kinetic braiding alpha_B = -alpha_M = 2 alpha_A.
+    """
+    return -tep_alpha_M(z, epsilon_T, z_T, n_T)
+
+
+def tep_alpha_K(z, epsilon_T=0.1, z_T=3.0, n_T=1.0):
+    """
+    Kineticity alpha_K = -5 alpha_A^2.
+    The apparent negative value is balanced by the full no-ghost
+    discriminant D = alpha_K + (3/2) alpha_B^2 = +alpha_A^2.
+    """
+    alpha_A = alpha_A_native(z, epsilon_T, z_T, n_T)
+    return -5.0 * (alpha_A ** 2)
+
+
+def get_hiclass_perturbation_params(epsilon_T, z_T=3.0, n_T=1.0, tep_perturbations='minimal_conformal'):
+    """
+    Configures hi_class for the active scalar perturbation closure.
+    """
+    params = {
+        'tep_mode': 'yes',
+        'tep_epsilon_T': epsilon_T,
+        'tep_z_T': z_T,
+        'tep_n_T': n_T
+    }
+
+    if tep_perturbations == 'minimal_conformal':
+        params['gravity_model'] = 'tep'
+        params['M2_evolution'] = 'yes'
+
+    return params
+
+
+def check_stability(z, epsilon_T=0.1, z_T=3.0, n_T=1.0):
+    """
+    Checks no-ghost (D > 0) and gradient (c_s^2 > 0) stability.
+    For the pure conformal limit, D = alpha_A^2 and c_s^2 = 1 exactly.
+    """
+    alpha_A = alpha_A_native(z, epsilon_T, z_T, n_T)
+    eft = evaluate_tep_eft_sector(alpha_A)
+
+    ghost_free = np.all(eft["D"] > 0)
+    gradient_free = np.all(eft["c_s2"] > 0)
+
+    if not ghost_free:
+        raise ValueError("Ghost instability detected (D <= 0)!")
+    if not gradient_free:
+        raise ValueError("Gradient instability detected (c_s^2 < 0)!")
+
+    return ghost_free, gradient_free

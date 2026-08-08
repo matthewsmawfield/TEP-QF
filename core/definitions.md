@@ -34,11 +34,13 @@ The spatial profile and coherence structure of the scalar field $\phi$ (equivale
 
 ### A.5 Screening
 
-Screening is the continuous suppression of the locally observable Temporal Shear/source-charge sector, expressed through the conformal factor $\ln A(\phi)$, its gradient $\Sigma_\mu$, and its covariance $C_A$ (compactly denoted $\Theta$, $C_\Theta$ where convenient). It is not a binary on/off switch but a smooth, environment-dependent suppression governed by the operator
+Screening is the continuous suppression of the locally observable Temporal Shear/source-charge sector, expressed through the conformal factor $\ln A(\phi)$, its gradient $\Sigma_\mu$, and its covariance $C_A$. It is not a binary on/off switch but a smooth, environment-dependent suppression governed by the operator
 
 $$\Sigma_\mu^{\text{obs}} = \mathcal S_\Sigma(\mathcal E) \, \Sigma_\mu,$$
 
 where $\mathcal E = \{\rho, \Phi/c^2, \text{source structure}, \text{ambient environment}, \text{boundary conditions}, z, \text{measurement channel}\}$. The screening factor $\mathcal S_\Sigma$ is not a density threshold; it is a smooth suppression of the locally active shear.
+
+Quantities such as $\rho_T$, $R_T(M)$, $S_\oplus(r)$, compactness $\Phi/c^2$, local stellar density, geometric coherence length, and channel-specific response coefficients are domain-specific projections of $\mathcal E$, not independent screening mechanisms and not interchangeable universal thresholds. Each is an observational transfer model that parameterizes the same underlying operator in a regime-appropriate form.
 
 The saturation scale $\rho_T \approx 20$ g/cm$^3$ is the characteristic scale at which Temporal Topology effects saturate. It is **not** a local on/off condition of the form $\rho > \rho_T \Rightarrow$ GR and $\rho < \rho_T \Rightarrow$ active TEP. Rather, it is the scale at which the non-linear Temporal Topology response saturates. The subatomic core density ($\rho_{\text{core}} \sim 10^4$ g/cm$^3$, Paper 24), the macroscopic many-body suppression scale ($\rho_c \approx 20$ g/cm$^3$, Paper 21), and the galactic transition density ($\rho_{\text{half}} \approx 0.5 \, M_\odot/\text{pc}^3$, Paper 26) are different effective projections of the same non-linear Temporal Topology response. The first-principles transfer relation between them remains an open derivation.
 
