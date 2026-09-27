@@ -11,7 +11,7 @@ class DevServer {
         this.isBuilding = false;
         this.buildQueue = false;
         this.server = null;
-        this.port = 51805; // Unique port for TEP-QF
+        this.port = 55523; // Unique port for TEP-QF (Paper 23)
     }
 
     async startLiveServer() {

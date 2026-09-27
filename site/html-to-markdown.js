@@ -73,7 +73,9 @@ class HTMLToMarkdownConverter {
             .replace(/<(em|i)[^>]*>([\s\S]*?)<\/(em|i)>/gi, '*$2*')
             .replace(/<code[^>]*>([\s\S]*?)<\/code>/gi, '`$1`')
             .replace(/<br\s*\/?>/gi, ' ')
-            .replace(/<\/?[a-zA-Z][^>]*>/g, '');
+            .replace(/<sub[^>]*>([\s\S]*?)<\/sub>/gi, '<sub>$1</sub>')
+            .replace(/<sup[^>]*>([\s\S]*?)<\/sup>/gi, '<sup>$1</sup>')
+            .replace(/<\/?(?!sub|sup)[a-zA-Z][^>]*>/g, '')
         return result.replace(/\s+/g, ' ').trim();
     }
 
@@ -153,7 +155,9 @@ class HTMLToMarkdownConverter {
         html = html.replace(/<br\s*\/?>/gi, '\n');
         html = html.replace(/<hr\s*\/?>/gi, '\n---\n');
 
-        html = html.replace(/<\/?[a-zA-Z][^>]*>/g, '');
+        html = html.replace(/<sub[^>]*>([\s\S]*?)<\/sub>/gi, '<sub>$1</sub>');
+        html = html.replace(/<sup[^>]*>([\s\S]*?)<\/sup>/gi, '<sup>$1</sup>');
+        html = html.replace(/<\/?(?!sub|sup)[a-zA-Z][^>]*>/g, '');
         html = this.decodeEntities(html);
         html = html.replace(/@@@CODEBLOCK_START:([^@]*)@@@[\r\n]+([\s\S]*?)[\r\n]+@@@CODEBLOCK_END@@@/g, (match, lang, code) => {
             const language = lang.trim();
@@ -202,6 +206,24 @@ class HTMLToMarkdownConverter {
             const outputPath = path.join(__dirname, '..', `23-TEP-QF-${version}-${codename}.md`);
             fs.writeFileSync(outputPath, fullMarkdown, 'utf8');
             console.log(`✅ Markdown saved to: ${outputPath} (${(markdown.length / 1024).toFixed(1)} KB)`);
+
+            // Keep the shared collection archive (../manuscripts/) in sync
+            try {
+                const sharedArchiveDir = path.join(__dirname, '..', '..', 'manuscripts');
+                if (fs.existsSync(sharedArchiveDir)) {
+                    const archiveName = path.basename(outputPath);
+                    const paperPrefix = archiveName.split('-')[0];
+                    for (const staleFile of fs.readdirSync(sharedArchiveDir)) {
+                        if (staleFile !== archiveName && staleFile.endsWith('.md') && staleFile.startsWith(`${paperPrefix}-TEP`)) {
+                            fs.rmSync(path.join(sharedArchiveDir, staleFile));
+                        }
+                    }
+                    fs.copyFileSync(outputPath, path.join(sharedArchiveDir, archiveName));
+                    console.log(`📄 Copied to shared archive: manuscripts/${archiveName}`);
+                }
+            } catch (archiveError) {
+                console.warn(`⚠️  Could not update shared manuscripts archive: ${archiveError.message}`);
+            }
         } catch (error) {
             console.error('❌ Markdown conversion failed:', error.message);
         }

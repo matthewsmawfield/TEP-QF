@@ -6,8 +6,8 @@
 ![The Dirac Limit of Dynamical Proper Time](site/public/image.webp)
 
 **Author:** Matthew Lukin Smawfield  
-**Version:** v0.2 (Qatar)  
-**Date:** First published: 12 June 2026 · Last updated: 13 June 2026  
+**Version:** v0.3 (Qatar)  
+**First published:** 12 June 2026 · **Last updated:** 13 September 2026
 **Status:** Preprint  
 **DOI:** [10.5281/zenodo.20572697](https://doi.org/10.5281/zenodo.20572697)  
 **Website:** [https://mlsmawfield.com/tep/qf/](https://mlsmawfield.com/tep/qf/)
@@ -41,7 +41,7 @@ The Klein–Gordon and Dirac equations are recovered as the screened, flat-frame
 | **Paper 12** | [TEP-JWST](https://github.com/matthewsmawfield/TEP-JWST) | The Temporal Equivalence Principle: A Unified Resolution to the JWST High-Redshift Anomalies | [10.5281/zenodo.19000827](https://doi.org/10.5281/zenodo.19000827) |
 | **Paper 13** | [TEP-WB](https://github.com/matthewsmawfield/TEP-WB) | The Temporal Equivalence Principle: Temporal Shear Recovery in Gaia DR3 Wide Binaries | [10.5281/zenodo.19102061](https://doi.org/10.5281/zenodo.19102061) |
 | **Paper 14** | [TEP-GNSS-MGEX](https://github.com/matthewsmawfield/TEP-GNSS-MGEX) | TEP-GNSS-MGEX: MGEX Multi-GNSS Clock Replication | [10.5281/zenodo.18748628](https://doi.org/10.5281/zenodo.18748628) |
-| **Paper 15** | [TEP-EFA](https://github.com/matthewsmawfield/TEP-EFA) | Temporal Equivalence Principle: Temporal Shear in the Earth Flyby Anomaly | [10.5281/zenodo.19454863](https://doi.org/10.5281/zenodo.19454863) |
+| **Paper 15** | [TEP-EFA](https://github.com/matthewsmawfield/TEP-EFA) | Temporal Equivalence Principle: Temporal Shear in the Earth Flyby Anomaly | [10.5281/zenodo.19454862](https://doi.org/10.5281/zenodo.19454862) |
 | **Paper 16** | [TEP-J0437](https://github.com/matthewsmawfield/TEP-J0437) | Synchronization Holonomy in Pulsar Scintillation | [10.5281/zenodo.19454620](https://doi.org/10.5281/zenodo.19454620) |
 | **Paper 17** | [TEP-LLR](https://github.com/matthewsmawfield/TEP-LLR) | Lunar Laser Ranging and the Nordtvedt Effect | [10.5281/zenodo.19446029](https://doi.org/10.5281/zenodo.19446029) |
 | **Paper 18** | [TEP-HC](https://github.com/matthewsmawfield/TEP-HC) | Temporal Equivalence Principle: hi_class Background Implementation and CMB Acoustic Peak Preservation | — |
@@ -76,7 +76,7 @@ The Klein–Gordon and Dirac equations are recovered as the screened, flat-frame
   journal={Zenodo},
   year={2026},
   doi={10.5281/zenodo.20572697},
-  note={Preprint v0.2 (Qatar)}
+  note={Preprint v0.3 (Qatar)}
 }
 ```
 

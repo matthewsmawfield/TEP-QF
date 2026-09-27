@@ -1,4 +1,4 @@
-v0.2 (Qatar) — Single-sheeted antiparticle ontology and topological conservation — 13 June 2026
+v0.3 (Qatar) — Single-sheeted antiparticle ontology and topological conservation — 13 September 2026
 
 - Antiparticle ontology reframed: orientation-conjugate modes within a single-sheeted spacetime, eliminating two-sheeted manifold language
 - Topological conservation introduced at the pair-production decoupling vertex

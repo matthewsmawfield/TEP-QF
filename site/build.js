@@ -2,6 +2,13 @@
 
 const fs = require('fs');
 const path = require('path');
+function loadSharedSnippet(filePath) {
+    if (!fs.existsSync(filePath)) {
+        return '';
+    }
+    return fs.readFileSync(filePath, 'utf8').trim();
+}
+
 
 function readJsonIfExists(filePath) {
     if (!fs.existsSync(filePath)) {
@@ -249,7 +256,8 @@ function createInjectionContext() {
         }
     }
 
-    return ctx;
+        ctx.SCREENING_PROJECTION_NOTICE = loadSharedSnippet(path.join(__dirname, '..', 'core', 'screening_projection_notice.html')) || '';
+return ctx;
 }
 
 function injectPlaceholders(template, context) {
@@ -396,7 +404,7 @@ async function buildStaticSite() {
         }
 
         // Copy robots.txt and sitemap.xml to dist root
-        const rootFiles = ['404.html', 'robots.txt', 'sitemap.xml', 'CNAME', '29c6507763d2303d801cc8ed89d39f88.txt', 'favicon.ico'];
+        const rootFiles = ['404.html', 'robots.txt', 'sitemap.xml', 'CNAME', 'favicon.ico'];
         for (const file of rootFiles) {
             const src = path.join(__dirname, 'public', file);
             const dest = path.join(distDir, file);
