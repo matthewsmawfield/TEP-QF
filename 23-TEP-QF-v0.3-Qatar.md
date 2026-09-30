@@ -1,7 +1,7 @@
 # Temporal Equivalence Principle: The Dirac Limit of Dynamical Proper Time
 **Matthew Lukin Smawfield**
 Version: v0.3 (Qatar)
-First published: 12 June 2026 · Last updated: 26 September 2026
+First published: 12 June 2026 · Last updated: 30 September 2026
 DOI: 10.5281/zenodo.20572697
 
 ---
@@ -390,13 +390,13 @@ The quantum-sector screening evidence inherits the $\rho_T$ calibration from Pap
 
 ## References
 
-- Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.14 (Jakarta). Zenodo. DOI: 10.5281/zenodo.16921911 (Paper 0)
+- Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.15 (Jakarta). Zenodo. DOI: 10.5281/zenodo.16921911 (Paper 0)
 
 - Smawfield, M. L. (2025). *Temporal Topology Saturation Scale: Cross-Scale Consistency of ρ_{T}*. Preprint v0.8 (New Delhi). Zenodo. DOI: 10.5281/zenodo.18064365 (Paper 6)
 
-- Smawfield, M. L. (2026). *Temporal Equivalence Principle: Disformal Kinematics and the Measurement Landscape*. Preprint v0.2 (Kuala Lumpur). Zenodo. DOI: 10.5281/zenodo.20572740 (Paper 25)
+- Smawfield, M. L. (2026). *Temporal Equivalence Principle: Disformal Kinematics and the Measurement Landscape*. Preprint v0.2 (Kuala Lumpur). Zenodo, in press. (Paper 25)
 
-- Smawfield, M. L. (2026). *Temporal Equivalence Principle: Fermion Spin as Temporal-Orientation Holonomy*. Preprint v0.1 (Paris). Zenodo. DOI: 10.5281/zenodo.20572705 (Paper 24)
+- Smawfield, M. L. (2026). *Temporal Equivalence Principle: Fermion Spin as Temporal-Orientation Holonomy*. Preprint v0.1 (Paris). Zenodo, in press. (Paper 24)
 
 - Smawfield, M. L. (2026). *Temporal Equivalence Principle: A Covariant Alternative to Cosmic Expansion*. Preprint v0.3 (Athens). Zenodo. DOI: 10.5281/zenodo.20370143 (Paper 26)
 

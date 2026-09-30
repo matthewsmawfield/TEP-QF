@@ -123,6 +123,10 @@ class HTMLToMarkdownConverter {
             const decodedCode = this.decodeEntities(code).replace(/\n+$/g, '');
             return `\n\n@@@CODEBLOCK_START:${language}@@@\n${decodedCode}\n@@@CODEBLOCK_END@@@\n\n`;
         });
+        html = html.replace(/<pre[^>]*>([\s\S]*?)<\/pre>/gi, (match, content) => {
+            const decoded = this.decodeEntities(content.replace(/<[^>]+>/g, '')).replace(/\n+$/g, '');
+            return `\n\n@@@CODEBLOCK_START:@@@\n${decoded}\n@@@CODEBLOCK_END@@@\n\n`;
+        });
 
         html = html.replace(/<table[^>]*>[\s\S]*?<\/table>/gi, (match) => this.tableToMarkdown(match));
 
@@ -145,7 +149,7 @@ class HTMLToMarkdownConverter {
         });
 
         html = html.replace(/<blockquote[^>]*>([\s\S]*?)<\/blockquote>/gi, (match, content) => '\n> ' + this.cleanInlineHtml(content) + '\n\n');
-        html = html.replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, (match, content) => this.cleanInlineHtml(content) + '\n\n');
+        html = html.replace(/<p\b[^>]*>([\s\S]*?)<\/p>/gi, (match, content) => this.cleanInlineHtml(content) + '\n\n');
 
         html = html.replace(/<(strong|b)[^>]*>([\s\S]*?)<\/(strong|b)>/gi, '**$2**');
         html = html.replace(/<(em|i)[^>]*>([\s\S]*?)<\/(em|i)>/gi, '*$2*');
@@ -190,17 +194,21 @@ class HTMLToMarkdownConverter {
             console.log(`  Total HTML: ${(allHtml.length / 1024).toFixed(1)} KB`);
             const markdownTitle = manifest.title || 'Temporal Equivalence Principle: The Dirac Limit of Dynamical Proper Time';
             const author = manifest.author || 'Matthew Lukin Smawfield';
-            const version = manifest.version || 'v0.1';
-            const codename = manifest.codename || 'TBD';
-            const firstPublished = manifest.first_published || manifest.date || new Date().getFullYear();
-            const lastUpdated = manifest.last_updated || new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+            const version = (manifest.version || 'v0.3').replace(/\s*\([^)]*\)\s*/g, '').trim();
+            const codename = manifest.codename || 'Qatar';
+            const firstPublished = manifest.first_published || '12 June 2026';
+            const lastUpdated = manifest.last_updated || manifest.date || '30 September 2026';
             const doi = manifest.doi || 'pending';
             
             const header = `# ${markdownTitle}\n**${author}**\nVersion: ${version} (${codename})\nFirst published: ${firstPublished} · Last updated: ${lastUpdated}\nDOI: ${doi}\n\n---\n\n`;
             
             let markdown = this.htmlToMarkdown(allHtml);
             // Remove leading indentation from all lines
-            markdown = markdown.split('\n').map(line => line.replace(/^\s+/, '')).join('\n').trim();
+            let inFence = false;
+            markdown = markdown.split('\n').map((line) => {
+                if (line.trimStart().startsWith('```')) inFence = !inFence;
+                return inFence ? line : line.replace(/^\s+/, '');
+            }).join('\n').trim();
             
             const fullMarkdown = header + markdown;
             const outputPath = path.join(__dirname, '..', `23-TEP-QF-${version}-${codename}.md`);

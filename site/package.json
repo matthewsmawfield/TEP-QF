@@ -1,6 +1,6 @@
 {
   "name": "tep-qf-site",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Temporal Equivalence Principle: The Dirac Limit of Dynamical Proper Time",
   "main": "index.html",
   "scripts": {

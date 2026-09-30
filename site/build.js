@@ -483,7 +483,7 @@ function copyRecursiveSync(src, dest) {
         });
     } else {
         // Filter out raw data files
-        if (src.endsWith('.csv') || src.endsWith('.dat') || src.endsWith('.nc')) {
+        if (src.endsWith('.csv') || src.endsWith('.dat') || src.endsWith('.nc') || src.endsWith('.DS_Store')) {
             return;
         }
         fs.copyFileSync(src, dest);
