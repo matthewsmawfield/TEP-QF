@@ -1,6 +1,6 @@
 theory:
   classy:
-    path: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC/external/hi_class/hi_class
+    path: ./external/hi_class/hi_class
     ignore_obsolete: true
     extra_args:
       output: tCl,pCl,lCl
@@ -68,5 +68,5 @@ sampler:
     fallback_covmat_scale: 3
     seed: 42
 
-output: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC/results/mcmc_chains/test_tt_only
+output: ./results/mcmc_chains/test_tt_only
 resume: false

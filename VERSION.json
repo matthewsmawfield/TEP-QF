@@ -1,13 +1,13 @@
 {
-  "version": "0.3",
+  "version": "0.4",
   "codename": "Qatar",
-  "date": "2026-09-13",
+  "date": "2026-10-17",
   "first_published": "12 June 2026",
-  "last_updated": "2026-09-30",
+  "last_updated": "2026-10-17",
   "doi": "10.5281/zenodo.20572697",
   "author": "Matthew Lukin Smawfield",
   "description": "The Dirac Limit of Dynamical Proper Time: the KG–Dirac sector of relativistic quantum mechanics is recovered as the screened flat-frame tangent limit of dynamical proper-time phase transport",
   "status": "Preprint",
   "paper": "23",
-  "previous_version": "0.2"
+  "previous_version": "0.3"
 }

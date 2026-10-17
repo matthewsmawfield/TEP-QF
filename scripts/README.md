@@ -25,4 +25,4 @@ see TEP-KIN (Paper 25), `scripts/derivations/derive_disformal_kinematics.py`.
 cd site && npm ci && npm run build
 ```
 
-Generates `23-TEP-QF-v0.3-Qatar.md` at the repository root.
+Generates `A23-TEP-QF-v0.3-Qatar.md` at the repository root.

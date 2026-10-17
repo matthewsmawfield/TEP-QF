@@ -30,3 +30,6 @@ Thumbs.db
 
 .devin/
 manuscripts/
+
+# Editor workspace state
+*.code-workspace

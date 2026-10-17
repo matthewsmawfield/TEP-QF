@@ -1,7 +1,7 @@
 # Quick test for hi_class with native TEP background-only
 theory:
   classy:
-    path: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC/external/hi_class/hi_class
+    path: ./external/hi_class/hi_class
     ignore_obsolete: True
     extra_args:
       output: tCl,pCl,lCl

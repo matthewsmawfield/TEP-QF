@@ -211,7 +211,7 @@ class HTMLToMarkdownConverter {
             }).join('\n').trim();
             
             const fullMarkdown = header + markdown;
-            const outputPath = path.join(__dirname, '..', `23-TEP-QF-${version}-${codename}.md`);
+            const outputPath = path.join(__dirname, '..', `A23-TEP-QF-${version}-${codename}.md`);
             fs.writeFileSync(outputPath, fullMarkdown, 'utf8');
             console.log(`✅ Markdown saved to: ${outputPath} (${(markdown.length / 1024).toFixed(1)} KB)`);
 

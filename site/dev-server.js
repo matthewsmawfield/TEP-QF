@@ -65,7 +65,41 @@ class DevServer {
             }
         } catch (e) { console.error('❌ Build failed:', e.message); }
         this.isBuilding = false;
+        if (this.initialBuildDone) this.schedulePdfBuild();
+        this.initialBuildDone = true;
     }
+
+    schedulePdfBuild() {
+        if (this.pdfDebounceTimer) clearTimeout(this.pdfDebounceTimer);
+        this.pdfDebounceTimer = setTimeout(() => this.buildPdf(), 1500);
+    }
+
+    buildPdf() {
+        if (this.isBuildingPdf) { this.pdfBuildQueue = true; return; }
+        const pdfScript = path.join(__dirname, "..", "scripts", "generate_site_pdf.py");
+        if (!fs.existsSync(pdfScript)) return;
+        this.isBuildingPdf = true;
+        console.log("📄 Regenerating PDF and syncing to manuscripts/pdfs/...");
+        const { spawn } = require("child_process");
+        const proc = spawn("python3", [pdfScript, "--skip-build"], {
+            cwd: path.join(__dirname, ".."),
+            stdio: "inherit"
+        });
+        proc.on("close", (code) => {
+            this.isBuildingPdf = false;
+            if (code === 0) {
+                console.log("✅ PDF regenerated and synced to manuscripts/pdfs/!");
+                if (this.clients) {
+                    for (const client of this.clients) client.write("data: reload\n\n");
+                }
+            }
+            if (this.pdfBuildQueue) {
+                this.pdfBuildQueue = false;
+                this.buildPdf();
+            }
+        });
+    }
+
 
     async start() {
         console.log('🎯 TEP-QF Development Server');

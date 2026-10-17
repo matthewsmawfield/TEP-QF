@@ -1,6 +1,5 @@
-v0.3 (Qatar) — Single-sheeted antiparticle ontology and topological conservation — 13 September 2026
+v0.4 (Qatar) — 17 October 2026 — Single-sheeted antiparticle ontology, unified unstretched-space PPN bound, and Dirac-Pauli spinor framing
 
-- Antiparticle ontology reframed: orientation-conjugate modes within a single-sheeted spacetime, eliminating two-sheeted manifold language
-- Topological conservation introduced at the pair-production decoupling vertex
-- Terminology unified: "temporal-orientation bundle" replaces "bipartite orientation bundle"; "antiparticles" replaces "antimatter"
-- Cosmology pointer in §1.5 softened to a clock-rate mechanism reference
+- Reframed antiparticles as orientation-conjugate modes within a single-sheeted spacetime with topological conservation at the pair-production decoupling vertex, replacing two-sheeted manifold language
+- Aligned the rubidium atom-interferometer falsifiability floor (delta m/m <= 1.5 x 10^-19) with the unified unstretched-space Cassini source-charge bound S_Sigma^(sun) <= 1.15 x 10^-5 (5.8 x 10^-6 isotropic benchmark) and the solved two-branch solar profile (y_tb(1.6 R_sun) = 2.16 x 10^-8, |gamma_PPN - 1| = 4.32 x 10^-8)
+- Clarified the rest-frame Dirac-Pauli four-component spinor correspondence, Lorentz-boost mixing, and open interacting QED radiative completion, and rolled companion citations forward (Paper 0 -> v0.16, Paper 6 -> v0.9, Paper 26 -> v0.4)

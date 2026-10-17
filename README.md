@@ -2,30 +2,31 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20572697.svg)](https://doi.org/10.5281/zenodo.20572697)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-
 ![The Dirac Limit of Dynamical Proper Time](site/public/image.webp)
 
 **Author:** Matthew Lukin Smawfield  
-**Version:** v0.3 (Qatar)  
-**First published:** 12 June 2026 · **Last updated:** 30 September 2026
+**Version:** v0.4 (Qatar)  
+**First published:** 12 June 2026 · **Last updated:** 17 October 2026  
 **Status:** Preprint  
 **DOI:** [10.5281/zenodo.20572697](https://doi.org/10.5281/zenodo.20572697)  
-**Website:** [https://mlsmawfield.com/tep/qf/](https://mlsmawfield.com/tep/qf/)
+**Website:** [https://mlsmawfield.com/tep/qf/](https://mlsmawfield.com/tep/qf/)  
+**Paper Series:** TEP Series · Group A (I. Foundations, Measurement Logic & Quantum Boundary) · Paper 23 (`A23`)
 
 ## Abstract
 
+<!-- Generated from site/components/1_abstract.html; update the manuscript source, then run tools/sync_current_corpus_readmes.py. -->
 
+Standard relativistic quantum mechanics, including the Klein–Gordon and Dirac equations, is recovered here as the screened, flat-frame tangent limit of a deeper dynamical proper-time phase transport governed by the Temporal Equivalence Principle (TEP). By governing proper-time accumulation dτ through a dynamical scalar field φ rather than treating time as a universal parameter, the causal matter metric is shown to reproduce the standard free-particle structures in the screened limit — a necessary consistency check for the theory — and two further structures are geometrically reinterpreted at the level of postulate.
 
+(1) The phase action S = −mc² ∫ dτ̃ emerges as the primitive geometric driver, with mass appearing in the primitive action as the parameter governing the oscillator frequency, ω_0 = mc² / ℏ, modulated by the conformal factor in the causal matter metric g̃_μν. (2) The Klein-Gordon equation is derived from the minimal geometric Lagrangian in the causal metric and verified via WKB / eikonal expansion; its eikonal limit recovers the g̃-Hamilton-Jacobi equation, not via operator substitution. (3) The Dirac operator is recovered as the local Clifford/tetrad representation in the isochronous background — it emerges in the limit where temporal shear Σ_μ and disformal coupling B(φ) are negligible. (4) Spin-1/2 is reinterpreted as temporal-orientation holonomy of the proper-time phase frame, and antiparticles as reversed proper-time orientation within the temporal-orientation bundle, eliminating the need for a macroscopic two-sheeted spacetime. (5) The spinor structure of relativistic quantum mechanics may be reinterpreted geometrically: the 1928 Dirac spinor admits a retrospective geometric interpretation as an algebraic encoding of temporal-orientation holonomy on an isochronous background. These results recover standard relativistic quantum mechanics as the screened tangent-space limit of the TEP causal geometry, in the regime where the temporal field is frozen and locally constant over the interaction scale; the saturation scale ρ_T ≈ 20 g/cm³ is empirically calibrated in TEP-UCD (Paper 6). The scope is stated plainly: the Klein–Gordon and Dirac recoveries are exact in the conformal limit B(φ) = 0 and constitute a consistency proof that QFT on the causal metric reduces to the standard form in the screened regime, rather than a TEP-specific derivation; the spin-1/2 and antiparticle reinterpretations are postulates about an orientation bundle with winding and non-abelian structure that the single scalar φ does not generate; the interacting theory — Born rule, gauge-invariant interactions, QED matching, g-factor, spin-statistics — is deferred to the companion Papers 24–25 (in preparation); and the estimated conformal mass shift (δm/m ≲ 1.5 × 10⁻¹⁹) is a falsifiability floor below realistic interferometric sensitivity, not a detectable prediction of this paper.
 
+Keywords: quantum foundations, Dirac equation, proper time, phase transport, spin, antimatter, scalar-tensor theories, geometric quantum mechanics, temporal equivalence principle, Hamilton-Jacobi equation, Klein-Gordon equation
 
-Standard relativistic quantum mechanics, including the Klein–Gordon and Dirac equations, is recovered here as the screened, flat-frame tangent limit of a deeper dynamical proper-time phase transport governed by the Temporal Equivalence Principle (TEP). By treating proper time τ as a dynamical scalar field φ rather than a universal parameter, the causal matter metric is shown to reproduce the standard free-particle structures in the screened limit — a necessary consistency check for the theory — and two further structures are geometrically reinterpreted at the level of postulate. (1) The phase action S = −mc 2 ∫ dτ̃ emerges as the primitive geometric driver, with mass appearing in the primitive action as the parameter governing the oscillator frequency, ω 0 = mc 2 / ℏ , modulated by the conformal factor in the causal matter metric g̃ μν . (2) The Klein-Gordon equation is derived from the minimal geometric Lagrangian in the causal metric and verified via WKB / eikonal expansion; its eikonal limit recovers the g̃ -Hamilton-Jacobi equation, not via operator substitution. (3) The Dirac operator is recovered as the local Clifford/tetrad representation in the isochronous background — it emerges in the limit where temporal shear Σ μ and disformal coupling B(φ) are negligible. (4) Spin-1/2 is reinterpreted as temporal-orientation holonomy of the proper-time phase frame, and antiparticles as reversed proper-time orientation within the temporal-orientation bundle, eliminating the need for a macroscopic two-sheeted spacetime. (5) The spinor structure of relativistic quantum mechanics may be reinterpreted geometrically: Dirac's 1928 spinor encoded temporal-orientation holonomy without access to a dynamical proper-time geometry. These results recover standard relativistic quantum mechanics as the screened tangent-space limit of the TEP causal geometry, in the regime where the temporal field is frozen and locally constant over the interaction scale; the saturation scale ρ T ≈ 20 g/cm 3 is empirically calibrated in TEP-UCD (Paper 6). The scope is stated plainly: the Klein–Gordon and Dirac recoveries are exact in the conformal limit B(φ) = 0 and constitute a consistency proof that QFT on the causal metric reduces to the standard form in the screened regime, rather than a TEP-specific derivation; the spin-1/2 and antiparticle reinterpretations are postulates about an orientation bundle with winding and non-abelian structure that the single scalar φ does not generate; the interacting theory — Born rule, gauge-invariant interactions, QED matching, g -factor, spin-statistics — is deferred to Papers 24–25; and the estimated conformal mass shift ( δm/m ≲ 1.5 × 10 −19 ) is a falsifiability floor below realistic interferometric sensitivity, not a detectable prediction of this paper.
-
+Current manuscript source: [1_abstract.html](site/components/1_abstract.html).
 
 ## Key Findings
 
-The Klein–Gordon and Dirac equations are recovered as the screened, flat-frame tangent limit of a deeper dynamical proper-time phase transport governed by TEP. The phase action S = −mc² ∫ dτ̃ emerges as the primitive geometric driver. The Dirac operator is recovered as the local Clifford/tetrad representation in the isochronous background — it emerges in the limit where temporal shear Σμ and disformal coupling B(φ) are negligible. Spin-1/2 is reinterpreted as temporal-orientation holonomy of the proper-time phase frame, and antiparticles as reversed proper-time orientation within the temporal-orientation bundle.
-
----
+The current findings, numerical results and comparison assumptions are reported in [5. Conclusion](site/components/6_conclusion.html). The abstract above is synchronized from the current manuscript.
 
 ## The TEP Research Program
 
@@ -47,7 +48,7 @@ The Klein–Gordon and Dirac equations are recovered as the screened, flat-frame
 | **Paper 13** | [TEP-WB](https://github.com/matthewsmawfield/TEP-WB) | The Temporal Equivalence Principle: Temporal Shear Recovery in Gaia DR3 Wide Binaries | [10.5281/zenodo.19102061](https://doi.org/10.5281/zenodo.19102061) |
 | **Paper 14** | [TEP-GNSS-MGEX](https://github.com/matthewsmawfield/TEP-GNSS-MGEX) | TEP-GNSS-MGEX: MGEX Multi-GNSS Clock Replication | [10.5281/zenodo.20572726](https://doi.org/10.5281/zenodo.20572726) |
 | **Paper 15** | [TEP-EFA](https://github.com/matthewsmawfield/TEP-EFA) | Temporal Equivalence Principle: Temporal Shear in the Earth Flyby Anomaly | [10.5281/zenodo.19454862](https://doi.org/10.5281/zenodo.19454862) |
-| **Paper 16** | [TEP-J0437](https://github.com/matthewsmawfield/TEP-J0437) | Synchronization Holonomy in Pulsar Scintillation | [10.5281/zenodo.19454620](https://doi.org/10.5281/zenodo.19454620) |
+| **Paper 16** | [TEP-J0437](https://github.com/matthewsmawfield/TEP-J0437) | Synchronization Holonomy in Pulsar Scintillation | [10.5281/zenodo.19454619](https://doi.org/10.5281/zenodo.19454619) |
 | **Paper 17** | [TEP-LLR](https://github.com/matthewsmawfield/TEP-LLR) | Lunar Laser Ranging and the Nordtvedt Effect | [10.5281/zenodo.19446028](https://doi.org/10.5281/zenodo.19446028) |
 | **Paper 18** | [TEP-HC](https://github.com/matthewsmawfield/TEP-HC) | Temporal Equivalence Principle: hi_class Background Implementation and CMB Acoustic Peak Preservation | — |
 | **Paper 19** | [TEP-LENS](https://github.com/matthewsmawfield/TEP-LENS) | Temporal Equivalence Principle: A Blind-Prediction Residual Analysis of Gravitational Lensing | — |
@@ -81,7 +82,7 @@ The Klein–Gordon and Dirac equations are recovered as the screened, flat-frame
   journal={Zenodo},
   year={2026},
   doi={10.5281/zenodo.20572697},
-  note={Preprint v0.3 (Qatar)}
+  note={Preprint v0.4 (Qatar)}
 }
 ```
 

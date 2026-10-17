@@ -6,7 +6,7 @@
 
 theory:
   classy:
-    path: /Users/matthewsmawfield/www/Temporal Equivalence Principle/TEP-HC/external/hi_class/hi_class
+    path: ./external/hi_class/hi_class
     ignore_obsolete: True
     extra_args:
       output: tCl,pCl,lCl
